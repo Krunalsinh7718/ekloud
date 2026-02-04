@@ -1,0 +1,161 @@
+// google font style ------------------------------------------------------------------------
+
+Inter: CSS class for a variable style
+
+// <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+Poppins: CSS classes
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+Manrope: CSS class for a variable style
+
+// <weight>: Use a value from 200 to 800
+// <uniquifier>: Use a unique and descriptive class name
+
+.manrope-<uniquifier> {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+// custom font style ------------------------------------------------------------------------
+/* @font-face {
+    font-family: 'Satoshi';
+    src: url('Satoshi-Black.eot');
+    src: url('Satoshi-Black.eot?#iefix') format('embedded-opentype'),
+        url('Satoshi-Black.woff2') format('woff2'),
+        url('Satoshi-Black.woff') format('woff'),
+        url('Satoshi-Black.ttf') format('truetype'),
+        url('Satoshi-Black.svg#Satoshi-Black') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+} */
+
+@font-face {
+    font-family: 'satoshi-regular';
+    src: url('Satoshi-Regular.eot');
+    src: url('Satoshi-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Satoshi-Regular.woff2') format('woff2'),
+        url('Satoshi-Regular.woff') format('woff'),
+        url('Satoshi-Regular.ttf') format('truetype'),
+        url('Satoshi-Regular.svg#Satoshi-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'satoshi-bold';
+    src: url('Satoshi-Bold.eot');
+    src: url('Satoshi-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Satoshi-Bold.woff2') format('woff2'),
+        url('Satoshi-Bold.woff') format('woff'),
+        url('Satoshi-Bold.ttf') format('truetype'),
+        url('Satoshi-Bold.svg#Satoshi-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'satoshi-medium';
+    src: url('Satoshi-Medium.eot');
+    src: url('Satoshi-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Satoshi-Medium.woff2') format('woff2'),
+        url('Satoshi-Medium.woff') format('woff'),
+        url('Satoshi-Medium.ttf') format('truetype'),
+        url('Satoshi-Medium.svg#Satoshi-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* @font-face {
+    font-family: 'Agrandir Wide';
+    src: url('Agrandir-WideLight.eot');
+    src: url('Agrandir-WideLight.eot?#iefix') format('embedded-opentype'),
+        url('Agrandir-WideLight.woff2') format('woff2'),
+        url('Agrandir-WideLight.woff') format('woff'),
+        url('Agrandir-WideLight.ttf') format('truetype'),
+        url('Agrandir-WideLight.svg#Agrandir-WideLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+} */
+
+@font-face {
+    font-family: 'agrandir-extrabold';
+    src: url('Agrandir-GrandHeavy.eot');
+    src: url('Agrandir-GrandHeavy.eot?#iefix') format('embedded-opentype'),
+        url('Agrandir-GrandHeavy.woff2') format('woff2'),
+        url('Agrandir-GrandHeavy.woff') format('woff'),
+        url('Agrandir-GrandHeavy.ttf') format('truetype'),
+        url('Agrandir-GrandHeavy.svg#Agrandir-GrandHeavy') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'agrandir-bold';
+    src: url('Agrandir-TextBold.eot');
+    src: url('Agrandir-TextBold.eot?#iefix') format('embedded-opentype'),
+        url('Agrandir-TextBold.woff2') format('woff2'),
+        url('Agrandir-TextBold.woff') format('woff'),
+        url('Agrandir-TextBold.ttf') format('truetype'),
+        url('Agrandir-TextBold.svg#Agrandir-TextBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'agrandir-regular';
+    src: url('Agrandir-Regular.eot');
+    src: url('Agrandir-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Agrandir-Regular.woff2') format('woff2'),
+        url('Agrandir-Regular.woff') format('woff'),
+        url('Agrandir-Regular.ttf') format('truetype'),
+        url('Agrandir-Regular.svg#Agrandir-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,69 @@
+// BEGIN: main header
+.app-header {
+    background: rgba(22, 20, 33, 0.4);
+    border: 1px solid rgba(22, 20, 33, 0.5);
+    backdrop-filter: blur(12px);
+    background-color: black;
+
+    .navbar-brand {
+        img {
+            max-width: 178px;
+        }
+    }
+
+    .navbar {
+        padding-block: toRem(18);
+    }
+
+    .navbar-nav {
+        gap: toRem(12);
+        align-items: center;
+
+        .nav-link {
+            color: #fff;
+            padding-inline: toRem(12);
+            padding-block: 0.25rem;
+            border-radius: toRem(80);
+            border: 1px solid transparent;
+
+            &:hover,
+            &.active {
+                background: rgba(79, 164, 218, 0.8);
+                border-color: #4FA4DA;
+            }
+        }
+
+        .btn {
+            border-radius: 10px;
+        }
+    }
+}
+
+// END: main header
+
+// BEGIN: main banner
+.section-main-banner {
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100dvh;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+  
+    .website-banner-img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .banner-text {
+        max-width: 600px;
+        color: white;
+     
+    }
+
+}

@@ -1,0 +1,14 @@
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+
+.app-container {
+    @include setContainer(1212px, 30px);
+}
+
+.nav-btn {
+    --bs-btn-border-radius: toRem(10);
+    --bs-btn-color: #fff;
+    --bs-btn-border-color: #D7D7D7;
+}

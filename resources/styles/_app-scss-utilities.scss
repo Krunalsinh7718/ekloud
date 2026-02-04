@@ -1,0 +1,76 @@
+//mixin
+
+
+
+
+@mixin keyframes($animName){
+    @-webkit-keyframes #{$animName}{
+        @content;
+    }
+    @keyframes #{$animName}{
+        @content;
+    }
+}
+@mixin cirEle($size){
+    height : #{$size};
+    width : #{$size};
+    border-radius: 50%;
+}
+@mixin sqrEle($size){
+    height : #{$size};
+    width : #{$size};
+}
+
+@mixin setContainer($width : 100%, $spacing) {
+    max-width: $width;
+    padding-inline: $spacing;
+    margin-inline: auto;
+}
+@mixin multilineDotText($maxHeight, $lineCount){
+        max-height: $maxHeight;
+        text-overflow:ellipsis;
+    overflow:hidden;
+    // Addition lines for 2 line or multiline ellipsis
+    display: -webkit-box !important;
+    -webkit-line-clamp: $lineCount;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+//placeholders
+%d-flex{
+    display: flex;
+}
+
+%flex-v-center{
+    display: flex;
+    align-items: center;
+}
+%flex-h-center{
+    display: flex;
+    justify-content: center;
+}
+%flex-vh-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+%common-transition{
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -ms-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+%bg-banner{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+//functions
+@function toRem($value) {
+    $remValue: calc($value / 16) + rem; 
+    @return $remValue;
+}

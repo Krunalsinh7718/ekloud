@@ -1,0 +1,37 @@
+//app fonts
+$app-font : "Heebo", sans-serif;
+
+
+//app colors
+$app-primary : #4FA4DA;
+$app-secondary: #F3F1FC;
+$app-green: #F3F1FC;
+
+$app-white: #FFFFFF;
+$app-gray: #858585;
+
+$app-green-gradient: linear-gradient(180deg, #3BF76A 0%, #30CF58 100%);
+
+$app-font-color: #222222;
+
+$app-btn-border-color: #D7D7D7;
+
+
+
+/*bootstrap variable overwrite*/
+//color
+$primary: $app-primary;
+// $secondary: $app-secondary;
+
+//button
+$btn-font-size: 16px;
+$btn-padding-y: 12px;
+$btn-padding-x: 24px;
+$btn-font-weight: 500;
+$btn-border-radius:  12px;
+
+$btn-padding-y-sm: 8px;
+$btn-padding-x-sm: 16px;
+$btn-border-radius-sm: 12px;
+
+$btn-link-color:             red;
