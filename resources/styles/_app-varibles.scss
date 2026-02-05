@@ -16,6 +16,9 @@ $app-font-color: #222222;
 
 $app-btn-border-color: #D7D7D7;
 
+:root{
+    --app-primary: #{$app-primary};
+}
 
 
 /*bootstrap variable overwrite*/
@@ -34,4 +37,5 @@ $btn-padding-y-sm: 8px;
 $btn-padding-x-sm: 16px;
 $btn-border-radius-sm: 12px;
 
-$btn-link-color:             red;
+$btn-link-color:red;
+

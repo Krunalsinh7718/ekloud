@@ -3,6 +3,22 @@ body {
     font-weight: 400;
 }
 
+.bg-dark-blue {
+    background-color: #0B2031;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.color-white-400 {
+    color: rgba(255, 255, 255, 0.384);
+}
+
+.section-pad {
+    padding-block: 80px;
+}
+
 .app-container {
     @include setContainer(1212px, 30px);
 }
@@ -12,3 +28,193 @@ body {
     --bs-btn-color: #fff;
     --bs-btn-border-color: #D7D7D7;
 }
+
+.title-font {
+    font-family: "Poppins", sans-serif;
+}
+
+.app-texts-60 {
+    font-size: 60px;
+    line-height: 60px;
+
+}
+
+.app-texts-35 {
+    font-size: 35px;
+    line-height: 56px;
+}
+
+.app-texts-42 {
+    font-size: 42px;
+    line-height: 60px;
+}
+
+.app-texts-22 {
+    font-size: 22px;
+    line-height: 32px;
+}
+
+.banner-title {
+    font-weight: 700;
+
+    small {
+        font-weight: 500;
+    }
+}
+
+.app-hov-primary-btn {
+    --bs-btn-padding-x: 24px;
+    --bs-btn-padding-y: 0;
+    --bs-btn-font-family: "Inter", sans-serif;
+    --bs-btn-font-size: 1rem;
+    --bs-btn-font-weight: 500;
+    --bs-btn-line-height: #{toRem(50)};
+    --bs-btn-color: #ffffff;
+    --bs-btn-bg: transparent;
+    --bs-btn-border-width: 1px;
+    --bs-btn-border-color: transparent;
+    --bs-btn-border-radius: #{toRem(24)};
+    --bs-btn-hover-border-color: transparent;
+    --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+    --bs-btn-disabled-opacity: 0.65;
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+
+    --bs-btn-color: #fff;
+    --bs-btn-border-color: #{$app-primary};
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: transparent;
+    --bs-btn-hover-border-color: #{$app-primary};
+    --bs-btn-focus-shadow-rgb: 79, 164, 218;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: transparent;
+    --bs-btn-active-border-color: #{$app-primary};
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #{$app-primary};
+    --bs-gradient: none;
+    --btn-translate-time: 0.4s;
+
+    .btn-text {
+        position: relative;
+        transition: translate var(--btn-translate-time);
+        z-index: 1;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        height: 500%;
+        width: 200%;
+        background-color: #{$app-primary};
+        top: 100%;
+        left: 100%;
+        transform-origin: 0 0;
+        rotate: -45deg;
+        transition: translate var(--btn-translate-time);
+    }
+
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+
+    &:hover {
+        .btn-text {
+            translate: 0 -100%;
+        }
+
+        &:after {
+            translate: -65% 0;
+        }
+    }
+
+}
+
+.app-section-tabs {
+    background-color: #444444;
+    border-radius: toRem(20);
+    overflow: hidden;
+
+    // #807F7F4D
+    .nav-tabs {
+        
+        --bs-nav-link-padding-x: #{toRem(15)};
+        --bs-nav-link-padding-y: #{toRem(30)};
+        --bs-nav-link-font-weight: 500;
+        --bs-nav-link-color: #fff;
+        --bs-nav-link-hover-color: #fff;
+        --bs-nav-link-disabled-color: #6c757d;
+
+        --bs-nav-tabs-border-width: 1px;
+        --bs-nav-tabs-border-color: rgba(128, 127, 127, 0.616);
+        --bs-nav-tabs-border-radius: 0;
+        --bs-nav-tabs-link-hover-border-color: transparent transparent transparent transparent;
+        --bs-nav-tabs-link-active-color: #fff;
+        --bs-nav-tabs-link-active-bg: transparent;
+        --bs-nav-tabs-link-active-border-color: transparent transparent transparent transparent;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        .nav-item{
+            flex: 1;
+        }
+        .nav-link{
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            max-width: 194px;
+            height: 100px;
+            text-align: center;
+            font-size: toRem(16);
+            position: relative;
+            margin-left: -1px;
+            border-color: transparent rgba(128, 127, 127, 0.616) rgba(128, 127, 127, 0.616) rgba(128, 127, 127, 0.616);
+
+            &:after{
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                // background-color: rgba(79, 164, 218, 1);
+                opacity: 0;
+                border-width: 0 1px 6px 0px;
+                border-style: solid;
+                border-color: transparent rgba(79, 164, 218, 1) rgba(79, 164, 218, 1) transparent;
+                transition: all 150ms;
+            }
+            &.active{
+                &:after{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .tab-pane{
+        padding: toRem(38) toRem(58);
+        color: #fff;
+        p{
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 32px;
+        }
+    }
+}
+
+
+
+.app-card{
+  background:#4a4a4a;
+  border-radius:20px;
+  padding:40px;
+  width:900px;
+  clip-path: polygon(
+    0 0,
+    75% 0,
+    80% 40px,
+    100% 40px,
+    100% 100%,
+    0 100%
+  );
+}
+
