@@ -18939,7 +18939,6 @@ body {
   border: 1px solid rgba(22, 20, 33, 0.5);
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
-  background-color: black;
 }
 .app-header .navbar-brand img {
   max-width: 178px;
