@@ -3,20 +3,23 @@
 
 
 
-@mixin keyframes($animName){
-    @-webkit-keyframes #{$animName}{
+@mixin keyframes($animName) {
+    @-webkit-keyframes #{$animName} {
         @content;
     }
-    @keyframes #{$animName}{
+
+    @keyframes #{$animName} {
         @content;
     }
 }
-@mixin cirEle($size){
+
+@mixin cirEle($size) {
     height : #{$size};
     width : #{$size};
     border-radius: 50%;
 }
-@mixin sqrEle($size){
+
+@mixin sqrEle($size) {
     height : #{$size};
     width : #{$size};
 }
@@ -26,10 +29,11 @@
     padding-inline: $spacing;
     margin-inline: auto;
 }
-@mixin multilineDotText($maxHeight, $lineCount){
-        max-height: $maxHeight;
-        text-overflow:ellipsis;
-    overflow:hidden;
+
+@mixin multilineDotText($maxHeight, $lineCount) {
+    max-height: $maxHeight;
+    text-overflow: ellipsis;
+    overflow: hidden;
     // Addition lines for 2 line or multiline ellipsis
     display: -webkit-box !important;
     -webkit-line-clamp: $lineCount;
@@ -39,29 +43,32 @@
 
 //functions
 @function toRem($value) {
-    $remValue: calc($value / 16) + rem; 
+    $remValue: calc($value / 16) + rem;
     @return $remValue;
 }
 
 //placeholders
-%d-flex{
+%d-flex {
     display: flex;
 }
 
-%flex-v-center{
+%flex-v-center {
     display: flex;
     align-items: center;
 }
-%flex-h-center{
+
+%flex-h-center {
     display: flex;
     justify-content: center;
 }
-%flex-vh-center{
+
+%flex-vh-center {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-%common-transition{
+
+%common-transition {
     -webkit-transition: all 150ms ease-in-out;
     -moz-transition: all 150ms ease-in-out;
     -ms-transition: all 150ms ease-in-out;
@@ -69,13 +76,13 @@
     transition: all 150ms ease-in-out;
 }
 
-%bg-banner{
+%bg-banner {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-%app-common-card{
+%app-common-card {
     @extend %bg-banner;
     border: 1px solid #FFFFFF;
     border-radius: toRem(10);
@@ -99,8 +106,44 @@
         line-height: toRem(32);
         color: #FFFFFF;
     }
-    @media(max-width: 768px){
+
+    @media(max-width: 768px) {
         padding: 1rem;
     }
 }
 
+
+%slider-round-arrow-btn {
+    .splide__arrow {
+        height: 56px;
+        width: 56px;
+        border-radius: 50%;
+        background-color: $app-primary;
+        border: none;
+        box-shadow: none;
+
+        svg {
+            width: 30px;
+            fill: #fff;
+        }
+
+        &.splide__arrow--prev {
+            translate: -50% 0;
+        }
+
+        &.splide__arrow--next {
+            translate: 50% 0;
+
+            svg {
+                rotate: 180deg;
+            }
+        }
+
+        path {
+            transform: translate(8px, 10px);
+        }
+        &[disabled]{
+            background-color: rgba(213, 213, 213, 0.078);
+        }
+    }
+}

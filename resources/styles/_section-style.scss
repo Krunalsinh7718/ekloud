@@ -171,7 +171,7 @@
 
 // BEGIN: main banner
 .section-main-banner {
-
+    position: relative;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -219,6 +219,13 @@
         }
     }
 
+    @media(max-width: 768px) {
+        .title-font {
+            font-size: 30px;
+            line-height: 40px;
+        }
+    }
+
 
 
 }
@@ -262,3 +269,144 @@
 }
 
 //End: section-partners
+
+//BEGIN testimonials
+.section-testimonials {
+    .testimonials-bg {
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 54%;
+            right: 0%;
+            top: 0;
+            @extend %bg-banner;
+            background-image: url("../images/background/background-6.png");
+        }
+    }
+
+    .testimonials-inner-wrapper {
+        position: relative;
+        height: 600px;
+        z-index: 1;
+
+        .quote-icon {
+            position: absolute;
+            left: 181px;
+            top: 24px;
+            width: 204px;
+        }
+    }
+
+    .title-font {
+        max-width: 315px;
+    }
+
+    .splide {
+        position: absolute;
+        top: 50%;
+        translate: 0 -50%;
+        left: 315px;
+        width: calc((100% - 315px) + (100vw - 1212px) / 2 + 18px);
+
+        .testimonial-card {
+            min-width: 100%;
+            max-width: 600px;
+        }
+    }
+
+    @media(max-width: 1199px) {
+        .slider-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .title-container {
+            text-align: center;
+
+        }
+
+        .splide {
+            position: static;
+            translate: 0 0;
+            width: 100%;
+        }
+
+        .testimonial-card {
+            width: 100%;
+            min-width: 80vw !important;
+            max-width: 80vw !important;
+        }
+
+        .testimonials-inner-wrapper {
+            height: auto;
+        }
+
+        .testimonials-bg {
+            padding-block: toRem(20);
+
+            &:after {
+                width: 100%;
+            }
+        }
+
+        .slider-btns {
+            i {
+                color: #fff !important;
+            }
+        }
+
+        .quote-icon {
+            display: none;
+        }
+    }
+}
+
+//END testimonials
+
+//BEGIN main footer
+.main-footer {
+    .footer-section-1 {
+        background-image:
+            linear-gradient(59deg,rgba(11, 32, 49, 1) 1%, rgba(11, 32, 49, 1) 10%, rgba(87, 199, 133, 0) 51%, rgba(11, 32, 49, 1) 90%, rgba(11, 32, 49, 1) 100%),
+            linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+            linear-gradient(to right,
+                rgba(255, 255, 255, 0.08) 1px,
+                rgba(229, 229, 247, 0) 1px),
+            url('../images/background/ekloud-logo-bg.png');
+        background-size:
+        cover,
+            35px 35px,
+            35px 35px,
+            60% auto;
+        background-position: center, center, center, center -9px;
+        background-repeat: repeat, repeat, repeat, no-repeat;
+
+    }
+
+    .footer-text {
+        max-width: 713px;
+    }
+
+    .social-media {
+        a {
+            font-size: 20px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+    @media(max-width: 1366px){
+        .footer-section-1{
+            background-position: center, center, center, center;
+        }
+    }
+}
+
+//END main footer

@@ -7,6 +7,13 @@ body {
     background-color: $app-dark-blue;
 }
 
+.bg-dark-blue-1 {
+    background-color: $app-dark-blue-1;
+}
+.bg-dark-blue-2{
+    background-color: #071825;
+}
+
 .bg-gray-1 {
     background-color: #444444;
 }
@@ -26,6 +33,11 @@ body {
 .color-muted {
     color: rgba(231, 231, 231, 0.6);
 }
+
+.color-text-gray {
+    color: rgb(128, 128, 128);
+}
+
 
 .section-pad {
     padding-block: toRem(80);
@@ -520,35 +532,8 @@ body {
         justify-content: space-between;
     }
 
-    .splide__arrow {
-        height: 56px;
-        width: 56px;
-        border-radius: 50%;
-        background-color: $app-primary;
-        border: none;
-        box-shadow: none;
+    @extend %slider-round-arrow-btn;
 
-        svg {
-            width: 30px;
-            fill: #fff;
-        }
-
-        &.splide__arrow--prev {
-            translate: -50% 0;
-        }
-
-        &.splide__arrow--next {
-            translate: 50% 0;
-
-            svg {
-                rotate: 180deg;
-            }
-        }
-
-        path {
-            transform: translate(8px, 10px);
-        }
-    }
 }
 
 .app-panel {
@@ -560,6 +545,12 @@ body {
     border-radius: toRem(10);
     border: 1px solid #fff;
     padding: toRem(20) toRem(36);
+
+    @media(max-width: 768px) {
+        font-size: 16px;
+        line-height: 16px;
+        padding: 1rem 1rem;
+    }
 }
 
 .app-card-1 {
@@ -639,25 +630,76 @@ body {
     display: grid;
     grid-template-columns: 1fr 164px;
     grid-template-rows: auto auto;
-    .splide__track{
+    column-gap: toRem(24);
 
+    .splide__track {
         grid-column: span 2;
-    grid-row: 1;
+        grid-row: 1;
     }
 
     .my-slider-progress {
+        translate: 0 -26px;
         background: #ccc;
+
+        .my-slider-progress-bar {
+            background: $app-primary;
+            height: 2px;
+            transition: width 400ms ease;
+            width: 0;
+        }
     }
 
-    .my-slider-progress-bar {
-        background: greenyellow;
-        height: 2px;
-        transition: width 400ms ease;
-        width: 0;
-    }
-    .splide__arrows{
+
+    .splide__arrows {
         grid-column: 2;
+        display: flex;
+        gap: toRem(20);
     }
 
+    @extend %slider-round-arrow-btn;
 
+    .splide__arrow {
+        translate: none !important;
+
+    }
+
+}
+
+.testimonial-card {
+    .card-body {
+        padding: toRem(40);
+    }
+
+    @media(max-width: 768px) {
+        .card-body {
+            padding: toRem(15);
+        }
+    }
+}
+
+.form-card {
+    border-radius: toRem(10);
+
+    .form-label {
+        color: #fff;
+    }
+
+    .form-control {
+        min-height: 44px;
+        border-radius: toRem(4);
+        font-weight: 300;
+        &::placeholder,
+        &::-webkit-input-placeholder,
+        &:-ms-input-placeholder{
+            color: rgba(130, 130, 130, 0.502);
+            opacity: 1;
+        }
+    }
+}
+.interest-card{
+    height: 464px;
+    border-radius: toRem(8);
+    @media(max-width: 768px){
+        height: 200px;
+    }
 }
