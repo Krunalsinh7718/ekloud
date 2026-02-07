@@ -34,6 +34,25 @@ document.addEventListener("DOMContentLoaded", () => {
         splide.mount();
     })
 
+    const progressSlider = document.querySelectorAll(".progress-slider");
+    console.log(progressSlider);
+    progressSlider.forEach(e => {
+        const bar = e.querySelector( '.my-slider-progress' );
+        
+        const splide = new Splide(e,{
+            pagination: false
+        });
+
+        splide.on( 'mounted move', function () {
+        let end  = splide.Components.Controller.getEnd() + 1;
+        let rate = Math.min( ( splide.index + 1 ) / end, 1 );
+        bar.style.width = String( 100 * rate ) + '%';
+    } );
+
+        splide.mount();
+    })
+
+
     // END: sliders ----------------------------
     // BEGIN: nav link click ----------------------------
 

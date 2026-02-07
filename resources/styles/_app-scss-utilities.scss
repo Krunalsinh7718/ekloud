@@ -37,6 +37,12 @@
     white-space: normal;
 }
 
+//functions
+@function toRem($value) {
+    $remValue: calc($value / 16) + rem; 
+    @return $remValue;
+}
+
 //placeholders
 %d-flex{
     display: flex;
@@ -69,8 +75,32 @@
     background-size: cover;
 }
 
-//functions
-@function toRem($value) {
-    $remValue: calc($value / 16) + rem; 
-    @return $remValue;
+%app-common-card{
+    @extend %bg-banner;
+    border: 1px solid #FFFFFF;
+    border-radius: toRem(10);
+    padding: toRem(50);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .card-title {
+        font-family: 'Poppins';
+        font-size: toRem(36);
+        line-height: toRem(42);
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        color: #FFFFFF;
+    }
+
+    .card-text {
+        font-weight: 400;
+        font-size: toRem(18);
+        line-height: toRem(32);
+        color: #FFFFFF;
+    }
+    @media(max-width: 768px){
+        padding: 1rem;
+    }
 }
+

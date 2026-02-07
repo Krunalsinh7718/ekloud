@@ -4,6 +4,40 @@
 }
 
 /*bootstrap variable overwrite*/
+.app-card-2, .app-card-1 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.app-card-2, .app-card-1 {
+  border: 1px solid #FFFFFF;
+  border-radius: 0.625rem;
+  padding: 3.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.app-card-2 .card-title, .app-card-1 .card-title {
+  font-family: "Poppins";
+  font-size: 2.25rem;
+  line-height: 2.625rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
+}
+.app-card-2 .card-text, .app-card-1 .card-text {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  color: #FFFFFF;
+}
+@media (max-width: 768px) {
+  .app-card-2, .app-card-1 {
+    padding: 1rem;
+  }
+}
+
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -19539,6 +19573,62 @@ body {
   translate: -65% 0;
 }
 
+.app-hov-primary-btn-1 {
+  --bs-btn-padding-x: 24px;
+  --bs-btn-padding-y: 0;
+  --bs-btn-font-family: "Inter", sans-serif;
+  --bs-btn-font-size: 1rem;
+  --bs-btn-font-weight: 500;
+  --bs-btn-line-height: 3.125rem;
+  --bs-btn-color: #ffffff;
+  --bs-btn-bg: #4FA4DA;
+  --bs-btn-border-width: 1px;
+  --bs-btn-border-color: transparent;
+  --bs-btn-border-radius: 1.5rem;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  --bs-btn-disabled-opacity: 0.65;
+  --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+  --bs-btn-color: #fff;
+  --bs-btn-border-color: #4FA4DA;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-bg: #4FA4DA;
+  --bs-btn-hover-border-color: #4FA4DA;
+  --bs-btn-focus-shadow-rgb: 79, 164, 218;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-border-color: #4FA4DA;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #4FA4DA;
+  --bs-gradient: none;
+  --btn-translate-time: 0.4s;
+  position: relative;
+  width: 187px;
+  height: 50px;
+  overflow: hidden;
+}
+.app-hov-primary-btn-1 .btn-text {
+  transition: translate var(--btn-translate-time);
+}
+.app-hov-primary-btn-1:after {
+  content: "";
+  position: absolute;
+  height: 197px;
+  width: 285px;
+  background-color: #4FA4DA;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 22px);
+  background-image: url(../images/background/btn-animation.svg);
+  background-position: center;
+  transition: all 0.6s ease-in-out;
+}
+.app-hov-primary-btn-1:hover:after {
+  transform: translate(-50%, -70%);
+}
+
 .app-section-tabs {
   border-radius: 1.25rem;
   overflow: hidden;
@@ -19663,7 +19753,7 @@ body {
   border-radius: 20px;
 }
 .img-text-sec-1 .sec-text {
-  padding-inline: 2rem;
+  padding: 2rem;
 }
 @media (max-width: 768px) {
   .img-text-sec-1 {
@@ -19781,6 +19871,97 @@ body {
 }
 .single-slider .splide__arrow path {
   transform: translate(8px, 10px);
+}
+
+.app-panel {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 36px;
+  color: #FFFFFF;
+  border-radius: 0.625rem;
+  border: 1px solid #fff;
+  padding: 1.25rem 2.25rem;
+}
+
+.app-card-2 {
+  border-color: rgb(161, 174, 191);
+  border-radius: 1.5rem;
+  justify-content: center;
+  min-height: 350px;
+}
+.app-card-2 .card-title,
+.app-card-2 .card-text {
+  max-width: 282px;
+}
+.app-card-2 .card-title {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+}
+.app-card-2 .card-text {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+.app-card-2 .icon-box {
+  display: block;
+  height: 3.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #4FA4DA;
+  display: grid;
+  place-items: center;
+  align-self: flex-start;
+}
+@media (max-width: 768px) {
+  .app-card-2 {
+    min-height: auto;
+  }
+  .app-card-2 .card-title,
+  .app-card-2 .card-text {
+    max-width: none;
+  }
+}
+
+.app-card-grid-1 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.app-card-grid-1 .grid-card-lg {
+  grid-column: span 3;
+}
+.app-card-grid-1 .grid-card-sm {
+  grid-column: span 2;
+}
+@media (max-width: 768px) {
+  .app-card-grid-1 .grid-card-lg {
+    grid-column: span 5;
+  }
+  .app-card-grid-1 .grid-card-sm {
+    grid-column: span 5;
+  }
+}
+
+.progress-slider {
+  display: grid;
+  grid-template-columns: 1fr 164px;
+  grid-template-rows: auto auto;
+}
+.progress-slider .splide__track {
+  grid-column: span 2;
+  grid-row: 1;
+}
+.progress-slider .my-slider-progress {
+  background: #ccc;
+}
+.progress-slider .my-slider-progress-bar {
+  background: greenyellow;
+  height: 2px;
+  transition: width 400ms ease;
+  width: 0;
+}
+.progress-slider .splide__arrows {
+  grid-column: 2;
 }
 
 .app-header {
