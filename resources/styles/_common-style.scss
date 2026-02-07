@@ -22,6 +22,9 @@ body {
 .color-white-400 {
     color: rgba(255, 255, 255, 0.384);
 }
+.color-muted{
+    color: rgba(231, 231, 231, 0.6);
+}
 
 .section-pad {
     padding-block: toRem(80);
@@ -33,6 +36,10 @@ body {
 
 .app-container {
     @include setContainer(1212px, 30px);
+
+    @media(max-width: 991px) {
+        padding-inline: 15px;
+    }
 }
 
 .nav-btn {
@@ -54,6 +61,16 @@ body {
 .app-texts-35 {
     font-size: 35px;
     line-height: 56px;
+}
+
+.app-texts-45 {
+    font-size: 45px;
+    line-height: 56px;
+    @media(max-width: 768px){
+        font-size: 38px;
+        line-height: 48px;
+    }
+    
 }
 
 .app-texts-42 {
@@ -87,15 +104,18 @@ body {
     }
 
     .app-texts-40 {
-    font-size: 34px;
-}
+        font-size: 34px;
+    }
 
     .app-texts-35 {
-    font-size: 30px;
-    line-height: 40px;
+        font-size: 30px;
+        line-height: 40px;
+    }
 }
+.bg-image{
+    background-size: cover;
+    background-position: center;
 }
-
 .banner-title {
     font-weight: 700;
 
@@ -254,12 +274,14 @@ body {
     }
 
     @media(max-width: 1199px) {
-        .tab-pane{
+        .tab-pane {
             padding: 1.5rem 1.5rem;
-            p{
+
+            p {
                 font-size: toRem(16);
             }
         }
+
         .nav-tabs .nav-link {
             font-size: toRem(14);
         }
@@ -323,11 +345,13 @@ body {
     .sec-text {
         padding-inline: 2rem;
     }
-    @media(max-width: 768px){
+
+    @media(max-width: 768px) {
         flex-direction: column;
         gap: 1.5rem;
         padding-block: 1.5rem;
-        .sec-text{
+
+        .sec-text {
             text-align: center;
         }
     }
@@ -458,4 +482,3 @@ body {
         }
     }
 }
-
