@@ -65,6 +65,12 @@
 .progress-slider .splide__arrow[disabled], .single-slider .splide__arrow[disabled] {
   background-color: rgba(213, 213, 213, 0.078);
 }
+@media (max-width: 575px) {
+  .progress-slider .splide__arrow, .single-slider .splide__arrow {
+    height: 45px;
+    width: 45px;
+  }
+}
 
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
@@ -19747,14 +19753,41 @@ body {
 }
 
 .app-folder-section {
+  position: relative;
+  width: calc(100% - 17px);
   padding: 2.375rem 3.625rem;
-  clip-path: path("M0 856C0 872.569 13.4315 886 30 886L1105 886C1121.57 886 1135 872.569 1135 856V109.605C1135 93.0362 1121.57 79.6047 1105 79.6047H792.164C780.128 79.6047 769.257 72.4113 764.551 61.3331L746.261 18.2716C741.555 7.19343 730.685 0 718.648 0H30C13.4315 0 0 13.4315 0 30V856Z");
+  background: linear-gradient(180deg, rgba(87, 199, 133, 0) 150px, rgb(68, 68, 68) 150px, rgb(68, 68, 68) 100%);
+  border-radius: 0 0 1.875rem 1.875rem;
+}
+.app-folder-section:before {
+  content: "";
+  position: absolute;
+  height: 150px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #444444;
+  clip-path: url(#bannerClip);
 }
 .app-folder-section .folder-title {
   max-width: 64%;
 }
 .app-folder-section .row {
   --bs-gutter-y: 1.5rem;
+}
+@media (max-width: 991px) {
+  .app-folder-section {
+    background-color: #444444;
+    border-radius: 1.875rem;
+    width: 100%;
+    padding: 1.875rem;
+  }
+  .app-folder-section:before {
+    display: none;
+  }
+  .app-folder-section .folder-title {
+    max-width: 100%;
+  }
 }
 
 .folder-info-box {
@@ -19772,6 +19805,14 @@ body {
 .folder-info-box .box-icon svg {
   max-width: 45px;
   max-height: 37px;
+}
+@media (max-width: 575px) {
+  .folder-info-box {
+    max-width: 100%;
+  }
+  .folder-info-box .box-icon {
+    height: 3.75rem;
+  }
 }
 
 .text-link-btn-1 svg {
@@ -19844,6 +19885,7 @@ body {
 .app-accordion .accordion-button {
   font-size: 1.25rem;
   font-weight: 600;
+  padding-right: 70px;
   box-shadow: none !important;
   transition: all 0.2s ease-in-out;
 }
@@ -19875,6 +19917,18 @@ body {
   padding-top: 0.625rem;
   background-color: #fff;
 }
+@media (max-width: 768px) {
+  .app-accordion .accordion-button {
+    padding: 24px 70px 24px 25px;
+  }
+  .app-accordion .accordion-body {
+    padding: 10px 25px 20px 25px;
+  }
+}
+
+.single-slider-wrapper {
+  padding-inline: 30px;
+}
 
 .single-slider {
   position: relative;
@@ -19889,6 +19943,22 @@ body {
   justify-content: space-between;
 }
 
+@media (max-width: 575px) {
+  .single-slider-wrapper {
+    padding-inline: 0px;
+  }
+  .single-slider .splide__arrows {
+    position: static;
+    translate: none;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .single-slider .splide__arrows .splide__arrow {
+    translate: none !important;
+  }
+}
 .app-panel {
   font-family: "Poppins";
   font-weight: 500;

@@ -10,7 +10,8 @@ body {
 .bg-dark-blue-1 {
     background-color: $app-dark-blue-1;
 }
-.bg-dark-blue-2{
+
+.bg-dark-blue-2 {
     background-color: #071825;
 }
 
@@ -370,15 +371,39 @@ body {
 
 
 .app-folder-section {
+    position: relative;
+    width: calc(100% - 17px);
+    &:before{
+        content: "";
+        position: absolute;
+        height: 150px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #444444;
+        clip-path: url(#bannerClip);
+    }
     padding: toRem(38) toRem(58);
-    clip-path: path("M0 856C0 872.569 13.4315 886 30 886L1105 886C1121.57 886 1135 872.569 1135 856V109.605C1135 93.0362 1121.57 79.6047 1105 79.6047H792.164C780.128 79.6047 769.257 72.4113 764.551 61.3331L746.261 18.2716C741.555 7.19343 730.685 0 718.648 0H30C13.4315 0 0 13.4315 0 30V856Z");
-
+    background: linear-gradient(180deg, rgba(87, 199, 133, 0) 150px, rgba(68, 68, 68, 1) 150px, rgba(68, 68, 68, 1) 100%);
+    border-radius: 0 0 toRem(30) toRem(30   );
     .folder-title {
         max-width: 64%;
     }
 
     .row {
         --bs-gutter-y: 1.5rem;
+    }
+    @media(max-width: 991px){
+        background-color: #444444;
+        border-radius: toRem(30);
+        width: 100%;
+        padding: toRem(30);
+         &:before{
+            display: none;
+         }
+         .folder-title {
+            max-width: 100%;
+         }
     }
 }
 
@@ -399,6 +424,12 @@ body {
             max-height: 37px;
         }
     }
+     @media(max-width: 575px){
+        max-width: 100%;
+         .box-icon {
+            height: toRem(60);
+        }
+     }
 
 }
 
@@ -478,6 +509,7 @@ body {
     .accordion-button {
         font-size: toRem(20);
         font-weight: 600;
+        padding-right: 70px;
         box-shadow: none !important;
         transition: all 0.2s ease-in-out;
 
@@ -517,6 +549,20 @@ body {
         padding-top: toRem(10);
         background-color: #fff;
     }
+
+    @media(max-width: 768px) {
+        .accordion-button {
+            padding: 24px 70px 24px 25px;
+        }
+
+        .accordion-body {
+            padding: 10px 25px 20px 25px;
+        }
+    }
+}
+
+.single-slider-wrapper {
+    padding-inline: 30px;
 }
 
 .single-slider {
@@ -534,6 +580,27 @@ body {
 
     @extend %slider-round-arrow-btn;
 
+}
+
+@media(max-width: 575px) {
+    .single-slider-wrapper {
+        padding-inline: 0px;
+    }
+
+    .single-slider {
+        .splide__arrows {
+            position: static;
+            translate: none;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+
+            .splide__arrow {
+                translate: none !important;
+            }
+        }
+    }
 }
 
 .app-panel {
@@ -688,18 +755,21 @@ body {
         min-height: 44px;
         border-radius: toRem(4);
         font-weight: 300;
+
         &::placeholder,
         &::-webkit-input-placeholder,
-        &:-ms-input-placeholder{
+        &:-ms-input-placeholder {
             color: rgba(130, 130, 130, 0.502);
             opacity: 1;
         }
     }
 }
-.interest-card{
+
+.interest-card {
     height: 464px;
     border-radius: toRem(8);
-    @media(max-width: 768px){
+
+    @media(max-width: 768px) {
         height: 200px;
     }
 }

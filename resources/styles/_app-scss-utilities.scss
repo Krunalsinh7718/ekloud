@@ -142,8 +142,14 @@
         path {
             transform: translate(8px, 10px);
         }
-        &[disabled]{
+
+        &[disabled] {
             background-color: rgba(213, 213, 213, 0.078);
+        }
+
+        @media(max-width: 575px) {
+            height: 45px;
+            width: 45px;
         }
     }
 }
