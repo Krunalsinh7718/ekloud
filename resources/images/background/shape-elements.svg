@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1136 317">
+    <rect width="809.5" height="239.5" x="160.75" y="35.5" stroke="url(#a)" stroke-width="1.5" rx="11.25" />
+    <rect width="694.5" height="240" x="1029.75" y="167.5" stroke="url(#b)" stroke-width="1.5" rx="11.25" />
+    <rect width="694.5" height="240" x="-596.25" y="-108.75" stroke="url(#c)" stroke-width="1.5" rx="11.25" />
+    <defs>
+        <linearGradient id="a" x1="1018.19" x2="124.397" y1="294.461" y2="-74.3429" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#AAD4F8" />
+            <stop offset=".14125" stop-color="#0E4B81" />
+            <stop offset=".784246" stop-color="#06447B" />
+            <stop offset=".9999" stop-color="#AAD4F8" />
+        </linearGradient>
+        <linearGradient id="b" x1="1765.5" x2="967.5" y1="427" y2="145" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#AAD4F8" />
+            <stop offset=".14125" stop-color="#0E4B81" />
+            <stop offset=".784246" stop-color="#06447B" />
+            <stop offset=".9999" stop-color="#AAD4F8" />
+        </linearGradient>
+        <linearGradient id="c" x1="139.5" x2="-658.5" y1="150.75" y2="-131.25" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#AAD4F8" />
+            <stop offset=".14125" stop-color="#0E4B81" />
+            <stop offset=".784246" stop-color="#06447B" />
+            <stop offset=".9999" stop-color="#AAD4F8" />
+        </linearGradient>
+    </defs>
+</svg>

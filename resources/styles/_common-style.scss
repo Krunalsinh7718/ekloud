@@ -64,6 +64,18 @@ body {
     --bs-btn-border-color: #D7D7D7;
 }
 
+.app-btn-glow {
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background: #3B95E1;
+    box-shadow: 0px 0px 40px 5px rgba(97, 158, 212, 0.4);
+    border-radius: 4px;
+    border: none;
+    padding: 14px 42px;
+}
+
 .title-font {
     font-family: "Poppins", sans-serif;
 }
@@ -274,9 +286,11 @@ body {
     }
 
 }
+
 .app-section-tabs {
     border-radius: toRem(20);
     overflow: hidden;
+
     .nav-tabs {
         --bs-nav-link-padding-x: #{toRem(15)};
         --bs-nav-link-padding-y: #{toRem(30)};
@@ -365,10 +379,12 @@ body {
         }
     }
 }
+
 .app-folder-section {
     position: relative;
     width: calc(100% - 18px);
-    &:before{
+
+    &:before {
         content: "";
         position: absolute;
         height: 150px;
@@ -378,9 +394,11 @@ body {
         background-color: #444444;
         clip-path: url(#bannerClip);
     }
+
     padding: toRem(38) toRem(58);
     background: linear-gradient(180deg, rgba(87, 199, 133, 0) 150px, rgba(68, 68, 68, 1) 150px, rgba(68, 68, 68, 1) 100%);
-    border-radius: 0 0 toRem(30) toRem(30   );
+    border-radius: 0 0 toRem(30) toRem(30);
+
     .folder-title {
         max-width: 64%;
     }
@@ -388,21 +406,26 @@ body {
     .row {
         --bs-gutter-y: 1.5rem;
     }
-    @media(max-width: 991px){
+
+    @media(max-width: 991px) {
         background-color: #444444;
         border-radius: toRem(30);
         width: 100%;
         padding: toRem(30);
-         &:before{
+
+        &:before {
             display: none;
-         }
-         .folder-title {
+        }
+
+        .folder-title {
             max-width: 100%;
-         }
+        }
     }
 }
+
 .folder-info-box {
     max-width: 255px;
+
     .box-icon {
         display: block;
         height: toRem(87);
@@ -417,20 +440,24 @@ body {
             max-height: 37px;
         }
     }
-     @media(max-width: 575px){
+
+    @media(max-width: 575px) {
         max-width: 100%;
-         .box-icon {
+
+        .box-icon {
             height: toRem(60);
         }
-     }
+    }
 
 }
+
 .text-link-btn-1 {
     svg {
         height: 20px;
         width: 20px;
     }
 }
+
 .img-text-sec-1 {
     background-color: #0B2031;
     display: flex;
@@ -459,6 +486,7 @@ body {
         }
     }
 }
+
 .app-accordion {
     --bs-accordion-color: #000000;
     --bs-accordion-bg: #ffffff00;
@@ -551,9 +579,11 @@ body {
         }
     }
 }
+
 .single-slider-wrapper {
     padding-inline: 30px;
 }
+
 .single-slider {
     position: relative;
 
@@ -657,37 +687,125 @@ body {
     }
 
 }
-.card-fixed-width{
+
+.card-fixed-width {
     width: 366px;
-    @media(max-width: 575px){
+
+    @media(max-width: 575px) {
         width: 300px;
     }
 }
-.app-card-3{
+
+.app-card-3 {
     @extend %app-common-card;
     text-align: center;
     padding: toRem(40) !important;
     min-height: 394px;
     border-radius: toRem(30) !important;
     overflow: hidden;
-    &:before{
+
+    &:before {
         content: "";
         position: absolute;
         inset: 0;
         background: #444444;
-background: linear-gradient(180deg,rgba(68, 68, 68, 0) 35%, rgba(0, 0, 0, 1) 100%);
+        background: linear-gradient(180deg, rgba(68, 68, 68, 0) 35%, rgba(0, 0, 0, 1) 100%);
     }
+
     .card-title {
         position: relative;
         font-size: toRem(20);
         line-height: toRem(26);
     }
+
     .card-text {
         position: relative;
         font-size: toRem(16);
         line-height: toRem(24);
     }
 }
+
+.app-card-4 {
+    @extend .app-card-3;
+    min-height: 436px;
+    border-radius: toRem(15) !important;
+    border: 1px solid $app-primary;
+
+    &:before {
+        background: linear-gradient(180deg, rgba(68, 68, 68, 0) 35%, rgba(79, 164, 218, 0.6) 100%);
+    }
+
+    .card-title {
+        font-size: toRem(35);
+        margin-bottom: 0px;
+    }
+
+    @media(max-width: 575px) {
+        min-height: 225px;
+    }
+}
+
+.app-card-5 {
+    @extend .app-card-3;
+    min-height: 340px;
+    border-radius: toRem(20) !important;
+    border: 2px solid #A1AEBF;
+    text-align: center;
+
+    &:before {
+        display: none;
+    }
+
+    .card-title {
+        font-size: toRem(52);
+        line-height: toRem(27);
+        letter-spacing: 5.2px;
+        margin-bottom: 22px;
+    }
+
+    .card-text {
+        font-size: toRem(20);
+        line-height: toRem(30);
+    }
+
+    @media(max-width: 575px) {
+        min-height: 225px;
+
+        .card-title {
+            font-size: toRem(25);
+            line-height: toRem(30);
+            letter-spacing: 2px;
+        }
+
+        .card-text {
+            font-size: toRem(16);
+            line-height: toRem(20);
+        }
+    }
+}
+
+.app-card-6 {
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: toRem(24);
+    border-radius: toRem(24);
+
+    .card-title {
+        font-size: toRem(30);
+        font-weight: toRem(40);
+        font-weight: 600;
+    }
+
+    @media(max-width: 768px) {
+         padding: toRem(15);
+        .card-title {
+            font-size: toRem(22);
+            font-weight: toRem(28);
+        }
+    }
+}
+
 .app-card-grid-1 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -790,5 +908,56 @@ background: linear-gradient(180deg,rgba(68, 68, 68, 0) 35%, rgba(0, 0, 0, 1) 100
 
     @media(max-width: 768px) {
         height: 200px;
+    }
+}
+
+.contact-us-card {
+
+    position: relative;
+    min-height: 316px;
+    background-color: #064378;
+    background-image: url(../images/background/shape-elements.svg);
+    @extend %bg-banner;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+
+    &:before,
+    &:after {
+
+        content: "";
+        position: absolute;
+    }
+
+    &:before {
+        width: 381px;
+        height: 422px;
+        left: -92px;
+        top: -195px;
+        background: #0A7ADA;
+        filter: blur(125px);
+    }
+
+    &:after {
+        position: absolute;
+        width: 525px;
+        height: 525px;
+        left: 852px;
+        top: 42px;
+        background: #0A7ADA;
+        filter: blur(150px);
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        p {
+            max-width: 890px;
+        }
     }
 }
