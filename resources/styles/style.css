@@ -4,21 +4,22 @@
 }
 
 /*bootstrap variable overwrite*/
-.section-testimonials .testimonials-bg:after, .app-card-2, .app-card-1 {
+.section-testimonials .testimonials-bg:after, .app-card-3, .app-card-2, .app-card-1 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.app-card-2, .app-card-1 {
+.app-card-3, .app-card-2, .app-card-1 {
   border: 1px solid #FFFFFF;
+  background-color: #111 !important;
   border-radius: 0.625rem;
   padding: 3.125rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
-.app-card-2 .card-title, .app-card-1 .card-title {
+.app-card-3 .card-title, .app-card-2 .card-title, .app-card-1 .card-title {
   font-family: "Poppins";
   font-size: 2.25rem;
   line-height: 2.625rem;
@@ -26,14 +27,14 @@
   letter-spacing: 0.2px;
   color: #FFFFFF;
 }
-.app-card-2 .card-text, .app-card-1 .card-text {
+.app-card-3 .card-text, .app-card-2 .card-text, .app-card-1 .card-text {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 2rem;
   color: #FFFFFF;
 }
 @media (max-width: 768px) {
-  .app-card-2, .app-card-1 {
+  .app-card-3, .app-card-2, .app-card-1 {
     padding: 1rem;
   }
 }
@@ -19422,7 +19423,9 @@ textarea.form-control-lg {
 }
 body {
   font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 300;
+  background-color: #000;
 }
 
 .bg-dark-blue {
@@ -19754,7 +19757,7 @@ body {
 
 .app-folder-section {
   position: relative;
-  width: calc(100% - 17px);
+  width: calc(100% - 18px);
   padding: 2.375rem 3.625rem;
   background: linear-gradient(180deg, rgba(87, 199, 133, 0) 150px, rgb(68, 68, 68) 150px, rgb(68, 68, 68) 100%);
   border-radius: 0 0 1.875rem 1.875rem;
@@ -19844,6 +19847,7 @@ body {
   }
   .img-text-sec-1 .sec-text {
     text-align: center;
+    order: 1;
   }
 }
 
@@ -20015,6 +20019,40 @@ body {
   }
 }
 
+.card-fixed-width {
+  width: 366px;
+}
+@media (max-width: 575px) {
+  .card-fixed-width {
+    width: 300px;
+  }
+}
+
+.app-card-3 {
+  text-align: center;
+  padding: 2.5rem !important;
+  min-height: 394px;
+  border-radius: 1.875rem !important;
+  overflow: hidden;
+}
+.app-card-3:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #444444;
+  background: linear-gradient(180deg, rgba(68, 68, 68, 0) 35%, rgb(0, 0, 0) 100%);
+}
+.app-card-3 .card-title {
+  position: relative;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+}
+.app-card-3 .card-text {
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .app-card-grid-1 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -20106,8 +20144,25 @@ body {
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
 }
+.app-header .navbar-brand {
+  width: 178px;
+  position: relative;
+  overflow: hidden;
+}
 .app-header .navbar-brand img {
   max-width: 178px;
+}
+.app-header .navbar-brand .logo-icon {
+  position: relative;
+}
+.app-header .navbar-brand .brand-logo-text {
+  position: absolute;
+  margin-left: 49px;
+  translate: calc(-100% - 5px) 0;
+  transition: all 0.3s ease-in-out;
+}
+.app-header .navbar-brand:hover .brand-logo-text, .app-header .navbar-brand:focus .brand-logo-text {
+  translate: 0% 0;
 }
 .app-header .navbar {
   padding-block: 1.125rem;
@@ -20283,12 +20338,6 @@ body {
     padding-bottom: 46px;
   }
 }
-@media (max-width: 768px) {
-  .section-main-banner .title-font {
-    font-size: 30px;
-    line-height: 40px;
-  }
-}
 
 .app-brand-box {
   height: 180px;
@@ -20413,4 +20462,30 @@ body {
   .main-footer .footer-section-1 {
     background-position: center, center, center, center;
   }
+}
+
+.shadow-img-box {
+  --offset: 52px;
+  width: 502px;
+  max-width: calc(100% - var(--offset));
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: calc(var(--offset) * -1) calc(var(--offset) * -1) 0 0 #0B2031;
+  translate: var(--offset) var(--offset);
+}
+.shadow-img-box img {
+  position: relative;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 768px) {
+  .shadow-img-box {
+    --offset: 25px;
+  }
+}
+
+.section-industry-overview .row {
+  --bs-gutter-x: 2.5rem;
 }/*# sourceMappingURL=style.css.map */

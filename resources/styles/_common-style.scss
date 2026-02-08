@@ -1,6 +1,8 @@
 body {
     font-family: "Inter", sans-serif;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 300;
+    background-color: #000;
 }
 
 .bg-dark-blue {
@@ -272,15 +274,10 @@ body {
     }
 
 }
-
 .app-section-tabs {
-
     border-radius: toRem(20);
     overflow: hidden;
-
-    // #807F7F4D
     .nav-tabs {
-
         --bs-nav-link-padding-x: #{toRem(15)};
         --bs-nav-link-padding-y: #{toRem(30)};
         --bs-nav-link-font-weight: 500;
@@ -368,11 +365,9 @@ body {
         }
     }
 }
-
-
 .app-folder-section {
     position: relative;
-    width: calc(100% - 17px);
+    width: calc(100% - 18px);
     &:before{
         content: "";
         position: absolute;
@@ -406,10 +401,8 @@ body {
          }
     }
 }
-
 .folder-info-box {
     max-width: 255px;
-
     .box-icon {
         display: block;
         height: toRem(87);
@@ -432,14 +425,12 @@ body {
      }
 
 }
-
 .text-link-btn-1 {
     svg {
         height: 20px;
         width: 20px;
     }
 }
-
 .img-text-sec-1 {
     background-color: #0B2031;
     display: flex;
@@ -464,10 +455,10 @@ body {
 
         .sec-text {
             text-align: center;
+            order: 1;
         }
     }
 }
-
 .app-accordion {
     --bs-accordion-color: #000000;
     --bs-accordion-bg: #ffffff00;
@@ -560,11 +551,9 @@ body {
         }
     }
 }
-
 .single-slider-wrapper {
     padding-inline: 30px;
 }
-
 .single-slider {
     position: relative;
 
@@ -668,7 +657,37 @@ body {
     }
 
 }
-
+.card-fixed-width{
+    width: 366px;
+    @media(max-width: 575px){
+        width: 300px;
+    }
+}
+.app-card-3{
+    @extend %app-common-card;
+    text-align: center;
+    padding: toRem(40) !important;
+    min-height: 394px;
+    border-radius: toRem(30) !important;
+    overflow: hidden;
+    &:before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: #444444;
+background: linear-gradient(180deg,rgba(68, 68, 68, 0) 35%, rgba(0, 0, 0, 1) 100%);
+    }
+    .card-title {
+        position: relative;
+        font-size: toRem(20);
+        line-height: toRem(26);
+    }
+    .card-text {
+        position: relative;
+        font-size: toRem(16);
+        line-height: toRem(24);
+    }
+}
 .app-card-grid-1 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);

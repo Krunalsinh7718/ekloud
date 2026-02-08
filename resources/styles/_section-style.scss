@@ -5,8 +5,26 @@
     backdrop-filter: blur(12px);
 
     .navbar-brand {
-        img {
+        width: 178px;
+        position: relative;
+        overflow: hidden;
+        img{
             max-width: 178px;
+        }
+        .logo-icon{
+            position: relative;
+        }
+        .brand-logo-text{
+            position: absolute;
+            margin-left: 49px;
+            translate: calc(-100% - 5px) 0;
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover,
+        &:focus{
+            .brand-logo-text{
+                translate: 0% 0;
+            }
         }
     }
 
@@ -218,16 +236,6 @@
             padding-bottom: 46px;
         }
     }
-
-    @media(max-width: 768px) {
-        .title-font {
-            font-size: 30px;
-            line-height: 40px;
-        }
-    }
-
-
-
 }
 
 //Begin: section-partners
@@ -410,3 +418,29 @@
 }
 
 //END main footer
+
+//BEGIN : section industry overview
+.shadow-img-box{
+    --offset: 52px;
+    width: 502px;
+    max-width: calc(100% - var(--offset));
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: toRem(12);
+    box-shadow: calc(var(--offset) * -1) calc(var(--offset) * -1) 0 0 #0B2031;
+    translate: var(--offset) var(--offset);
+    img{
+        position: relative;
+        max-width: 100%;
+        object-fit: cover;
+    }
+    @media(max-width: 768px) {
+        --offset: 25px;
+    }
+}
+.section-industry-overview{
+    .row{
+        --bs-gutter-x: 2.5rem;
+    }
+}
+//END : section industry overview

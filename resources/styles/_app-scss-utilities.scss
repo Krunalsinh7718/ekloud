@@ -85,6 +85,7 @@
 %app-common-card {
     @extend %bg-banner;
     border: 1px solid #FFFFFF;
+    background-color: #111 !important;
     border-radius: toRem(10);
     padding: toRem(50);
     display: flex;
