@@ -33,6 +33,21 @@ document.addEventListener("DOMContentLoaded", () => {
         splide.mount();
     })
 
+    const singleSlideDots = document.querySelectorAll(".single-slider-dots");
+    console.log(singleSlideDots);
+    
+
+    singleSlideDots.forEach(e => {
+        const splide = new Splide(e, {
+            type: 'loop',
+            focus: 'center',
+            pagination: true,
+            arrows: false
+        });
+
+        splide.mount();
+    })
+
     const progressSlider = document.querySelectorAll(".progress-slider");
     progressSlider.forEach(e => {
         const bar = e.querySelector('.my-slider-progress-bar');
