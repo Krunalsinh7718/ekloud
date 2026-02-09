@@ -689,11 +689,52 @@
         margin-top: -188px;
     }
 }
-
 //END : blog page banner
 
-//BEGIN : blog page banner
-.section-blogs{
-    
+//BEGIN : section career banner
+.section-career-banner{
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    .app-container{
+        width: 100%;
+        padding-block: toRem(145);
+        color: #fff;
+    }
+    .banner-title,
+    .banner-text{
+        max-width: 614px;
+        text-align: left;
+    }
+   @media(max-width: 991px){
+    .app-container{
+        padding-block: toRem(50);
+    }
+   }
 }
-//END : blog page banner
+//END : section career banner
+
+
+//BEGIN : section why working with
+.section-why-working-with{
+
+}
+.display-img-wrapper{
+    position: relative;
+    .info-text{
+        position: absolute;
+        color: #fff;
+        i{
+            color: $app-primary;
+        }
+        &.info-left{
+            top: 0;
+            left: 0;
+        }
+        &.info-right{
+            top: 0;
+            right: 0;
+        }
+    }
+}
+//END : section why working with

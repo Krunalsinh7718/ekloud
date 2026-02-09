@@ -20313,6 +20313,7 @@ body {
 .interest-card {
   height: 464px;
   border-radius: 0.5rem;
+  border: none;
 }
 @media (max-width: 768px) {
   .interest-card {
@@ -20906,4 +20907,44 @@ body {
 
 .blog-banner-slider .splide {
   margin-top: -188px;
+}
+
+.section-career-banner {
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+}
+.section-career-banner .app-container {
+  width: 100%;
+  padding-block: 9.0625rem;
+  color: #fff;
+}
+.section-career-banner .banner-title,
+.section-career-banner .banner-text {
+  max-width: 614px;
+  text-align: left;
+}
+@media (max-width: 991px) {
+  .section-career-banner .app-container {
+    padding-block: 3.125rem;
+  }
+}
+
+.display-img-wrapper {
+  position: relative;
+}
+.display-img-wrapper .info-text {
+  position: absolute;
+  color: #fff;
+}
+.display-img-wrapper .info-text i {
+  color: #4FA4DA;
+}
+.display-img-wrapper .info-text.info-left {
+  top: 0;
+  left: 0;
+}
+.display-img-wrapper .info-text.info-right {
+  top: 0;
+  right: 0;
 }/*# sourceMappingURL=style.css.map */

@@ -1017,6 +1017,7 @@ body {
 .interest-card {
     height: 464px;
     border-radius: toRem(8);
+    border: none;
 
     @media(max-width: 768px) {
         height: 200px;

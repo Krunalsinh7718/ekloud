@@ -92,12 +92,12 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("1");
             slidePrevBtn.addEventListener('click', e => {
 
-                splide.go('+1')
+                splide.go('-1')
             })
         }
         if (slideNextBtn) {
             slideNextBtn.addEventListener('click', e => {
-                splide.go('-1')
+                splide.go('+1')
             })
         }
 
