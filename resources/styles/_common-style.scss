@@ -17,6 +17,10 @@ body {
     background-color: #071825;
 }
 
+.bg-dark-blue-3 {
+    background-color: rgba(5, 25, 41, 0.898);
+}
+
 .bg-gray-1 {
     background-color: #444444;
 }
@@ -58,8 +62,14 @@ body {
     }
 }
 
+.badge-outline-primary {
+    border: 1px solid $app-primary;
+    color: $app-primary;
+    background-color: transparent;
+}
+
 .btn-primary {
-    --bs-btn-color:#fff;
+    --bs-btn-color: #fff;
 }
 
 .nav-btn {
@@ -81,7 +91,8 @@ body {
     --bs-btn-font-size: 0.875rem;
     --bs-btn-border-radius: 26px;
 }
-.app-btn-wide{
+
+.app-btn-wide {
     min-width: 238px;
 }
 
@@ -914,6 +925,40 @@ body {
 
     @media(max-width: 575px) {
         min-height: 450px;
+    }
+}
+
+.app-job-card {
+    padding: toRem(40) toRem(32);
+    background-color: #0B2031;
+    color: #fff;
+    border-radius: toRem(40);
+    border-left: 9px solid $app-primary;
+
+    .card-body {
+        padding: 0px;
+    }
+
+    .card-icon {
+        height: 27px;
+        width: 27px;
+    }
+
+    .btn-text {
+        display: flex;
+        align-items: center;
+    }
+
+    .card-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .badge {
+        --bs-badge-padding-x: 1.2em;
+        font-size: toRem(16);
+        font-weight: 400;
     }
 }
 

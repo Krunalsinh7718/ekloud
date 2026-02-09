@@ -689,52 +689,124 @@
         margin-top: -188px;
     }
 }
+
 //END : blog page banner
 
 //BEGIN : section career banner
-.section-career-banner{
+.section-career-banner {
     justify-content: flex-start;
     align-items: center;
     text-align: left;
-    .app-container{
+
+    .app-container {
         width: 100%;
         padding-block: toRem(145);
         color: #fff;
     }
+
     .banner-title,
-    .banner-text{
+    .banner-text {
         max-width: 614px;
         text-align: left;
     }
-   @media(max-width: 991px){
-    .app-container{
-        padding-block: toRem(50);
+
+    @media(max-width: 991px) {
+        .app-container {
+            padding-block: toRem(50);
+        }
     }
-   }
 }
+
 //END : section career banner
 
 
 //BEGIN : section why working with
-.section-why-working-with{
+.section-why-working-with {}
 
-}
-.display-img-wrapper{
+.display-img-wrapper {
     position: relative;
-    .info-text{
+
+    .info-element {
         position: absolute;
         color: #fff;
-        i{
+
+        i {
             color: $app-primary;
+            font-size: toRem(60);
         }
-        &.info-left{
+
+        &.info-left {
             top: 0;
-            left: 0;
+            left: 4%;
         }
-        &.info-right{
+
+        &.info-right {
             top: 0;
-            right: 0;
+            left: 57%;
+
+            .info-icon {
+                display: block;
+                height: 129px;
+                width: 129px;
+                border-radius: 50%;
+                border: 3px solid $app-primary;
+                display: grid;
+                place-items: center;
+            }
+        }
+
+        .info-count {
+            max-width: 160px;
+        }
+
+        @media(max-width: 768px) {
+            text-shadow: 2px 2px BLACK;
+
+            i {
+                font-size: 22px;
+            }
+
+            &.info-left {
+                left: 0;
+            }
+
+            &.info-right {
+                left: auto;
+                right: 0;
+                top: 50px;
+
+                .info-icon {
+                    height: 59px;
+                    width: 59px;
+                }
+            }
+
+            .info-count {
+                p {
+                    font-size: 18px !important;
+                    line-height: 26px !important;
+                }
+            }
         }
     }
 }
+
 //END : section why working with
+//BEGIN : section go beyond
+.section-go-beyond {
+    .row {
+        --bs-gutter-x: #{toRem(10)};
+        --bs-gutter-y: #{toRem(20)};
+    }
+}
+
+//END : section go beyond
+//BEGIN : section go beyond
+.section-job-opportunities {
+    .row {
+        --bs-gutter-x: #{toRem(25)};
+        --bs-gutter-y: #{toRem(50)};
+    }
+}
+
+//END : section go beyond
