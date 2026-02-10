@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    min-height: 100dvh;
+    padding: 66px 30px;
+    background: #fff;
+    background: linear-gradient(183.44deg, rgba(28, 98, 164, 0.2) 73.11%, rgba(255, 255, 255, 0.112) 105.95%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.app-logo,
+.error-text {
+    position: relative;
+    z-index: 1;
+}
+
+.app-logo {
+    position: relative;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.15));
+
+}
+
+.error-text {
+    text-align: center;
+    position: relative;
+}
+
+.error-text h1 {
+    font-size: 68px;
+    line-height: 88px;
+    font-weight: bold;
+    color: #303030;
+}
+
+.error-text p {
+    font-size: 28px;
+    color: #929292;
+    margin-bottom: 34px;
+}
+
+button {
+    font-size: 16px;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    height: 50px;
+    padding: 14px 24px;
+    width: 191px;
+    height: 50px;
+    background: #4FA4DA;
+    border-radius: 10px;
+}
+
+button svg {
+    height: 20px;
+    width: 20px;
+}
+
+.cloud-1,
+.cloud-2 {
+    max-width: 90vmin;
+}
+.error-char {
+
+    height: clamp(260px, 565px, 50vmin);
+}
+.layer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  /* transition: transform 0.05s linear; */
+}
+.text-404 {
+
+    font-weight: 800;
+    font-size: clamp(45px, 600px, 60vmin);
+    line-height: 820px;
+    letter-spacing: 0.11em;
+    color: #FFFFFF;
+}
+
+@media(max-width: 768px) {
+    .error-page {
+        padding: 26px 20px;
+    }
+
+    .error-text h1 {
+        font-size: 45px;
+        line-height: 51px;
+    }
+
+    p {
+        margin-bottom: 14px;
+    }
+
+    .text-404 {
+        font-size: clamp(45px, 600px, 43vmin);
+        line-height: normal;
+    }
+
+    .error-text p {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+}

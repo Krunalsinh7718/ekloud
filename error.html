@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ekloud</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./resources/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./resources/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./resources/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./resources/images/favicon/site.webmanifest">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./resources/styles/style-404.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="error-page">
+            <img src="./resources/images/elements/cloud-1.png" alt="background element" class="layer cloud-1"
+                data-speed="1">
+            <img src="./resources/images/elements/cloud-2.png" alt="background element" class="layer cloud-2"
+                data-speed="1.5">
+            <span class="layer text-404" data-speed="2">404</span>
+            <img src="./resources/images/elements/whisk.png" alt="whisk" class="layer error-char" data-speed="4">
+
+            <a href="#" class="app-logo">
+                <img src="./resources/images/logo/ekloud_logo.png" alt="ekloud logo">
+            </a>
+            <div class="error-text">
+                <h1>Oops, i think we're lost </h1>
+                <p>Let's get you back to some where familiar </p>
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 10">
+                        <path fill="#fff"
+                            d="M4 10 0 6V4l4-4a1 1 0 1 1 2 1L3 4h7a1 1 0 1 1 0 2H3l3 3a1 1 0 0 1-1 1 1 1 0 0 1-1 0Z" />
+                    </svg>
+                    Back to home
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const wrapper = document.querySelector(".error-page");
+            const layers = document.querySelectorAll(".layer");
+
+            wrapper.addEventListener("mousemove", (e) => {
+
+                const x = (window.innerWidth / 2 - e.clientX) / 25;
+                const y = (window.innerHeight / 2 - e.clientY) / 25;
+
+                layers.forEach(layer => {
+                    const speed = layer.getAttribute("data-speed");
+
+                    const moveX = x * speed;
+                    const moveY = y * speed;
+
+                    layer.style.transform =
+                        `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px)) rotateY(${moveX / 5}deg)`;
+                });
+
+            });
+        })
+    </script>
+</body>
+
+</html>
