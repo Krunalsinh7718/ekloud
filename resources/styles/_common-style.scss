@@ -150,10 +150,12 @@ body {
 .app-texts-40 {
     font-size: 40px;
 }
+
 .app-texts-28 {
     font-size: 28px;
     line-height: 38px;
 }
+
 .app-texts-22 {
     font-size: 22px;
     line-height: 32px;
@@ -163,7 +165,8 @@ body {
     font-size: 18px;
     line-height: 24px;
 }
-.app-round-20{
+
+.app-round-20 {
     border-radius: toRem(20);
 }
 
@@ -965,6 +968,29 @@ body {
     }
 }
 
+.app-card-10 {
+    @extend .app-card-8;
+    padding: toRem(14) toRem(17) !important;
+    @media(max-width: 768px){
+        min-height: 350px;
+    }
+}
+.app-card-11 {
+    @extend .app-card-3;
+    border: none !important;
+    min-height: 265px;
+    border-radius: toRem(20);
+    text-align: center;
+    &:before{
+        display: none;
+    }
+    .card-title{
+        font-size: toRem(28);
+        line-height: toRem(33);
+        margin-bottom: 0px;
+    }
+}
+
 .app-job-card {
     padding: toRem(40) toRem(32);
     background-color: #0B2031;
@@ -998,9 +1024,11 @@ body {
         font-weight: 400;
     }
 }
-.app-card-techno{
+
+.app-card-techno {
     border-radius: toRem(20);
-    .card-body{
+
+    .card-body {
         padding: toRem(30);
     }
 }

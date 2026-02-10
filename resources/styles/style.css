@@ -4,13 +4,13 @@
 }
 
 /*bootstrap variable overwrite*/
-.section-testimonials .testimonials-bg:after, .contact-us-card, .app-card-3, .app-card-9, .app-card-8, .app-card-7, .app-card-5, .app-card-4, .app-card-2, .app-card-1 {
+.section-testimonials .testimonials-bg:after, .contact-us-card, .app-card-3, .app-card-11, .app-card-9, .app-card-8, .app-card-10, .app-card-7, .app-card-5, .app-card-4, .app-card-2, .app-card-1 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.app-card-3, .app-card-9, .app-card-8, .app-card-7, .app-card-5, .app-card-4, .app-card-2, .app-card-1 {
+.app-card-3, .app-card-11, .app-card-9, .app-card-8, .app-card-10, .app-card-7, .app-card-5, .app-card-4, .app-card-2, .app-card-1 {
   border: 1px solid #FFFFFF;
   background-color: #111 !important;
   border-radius: 0.625rem;
@@ -19,7 +19,7 @@
   flex-direction: column;
   justify-content: flex-end;
 }
-.app-card-3 .card-title, .app-card-9 .card-title, .app-card-8 .card-title, .app-card-7 .card-title, .app-card-5 .card-title, .app-card-4 .card-title, .app-card-2 .card-title, .app-card-1 .card-title {
+.app-card-3 .card-title, .app-card-11 .card-title, .app-card-9 .card-title, .app-card-8 .card-title, .app-card-10 .card-title, .app-card-7 .card-title, .app-card-5 .card-title, .app-card-4 .card-title, .app-card-2 .card-title, .app-card-1 .card-title {
   font-family: "Poppins";
   font-size: 2.25rem;
   line-height: 2.625rem;
@@ -27,14 +27,14 @@
   letter-spacing: 0.2px;
   color: #FFFFFF;
 }
-.app-card-3 .card-text, .app-card-9 .card-text, .app-card-8 .card-text, .app-card-7 .card-text, .app-card-5 .card-text, .app-card-4 .card-text, .app-card-2 .card-text, .app-card-1 .card-text {
+.app-card-3 .card-text, .app-card-11 .card-text, .app-card-9 .card-text, .app-card-8 .card-text, .app-card-10 .card-text, .app-card-7 .card-text, .app-card-5 .card-text, .app-card-4 .card-text, .app-card-2 .card-text, .app-card-1 .card-text {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 2rem;
   color: #FFFFFF;
 }
 @media (max-width: 768px) {
-  .app-card-3, .app-card-9, .app-card-8, .app-card-7, .app-card-5, .app-card-4, .app-card-2, .app-card-1 {
+  .app-card-3, .app-card-11, .app-card-9, .app-card-8, .app-card-10, .app-card-7, .app-card-5, .app-card-4, .app-card-2, .app-card-1 {
     padding: 1rem;
   }
 }
@@ -20105,7 +20105,7 @@ body {
   }
 }
 
-.app-card-3, .app-card-9, .app-card-8, .app-card-7, .app-card-5, .app-card-4 {
+.app-card-3, .app-card-11, .app-card-9, .app-card-8, .app-card-10, .app-card-7, .app-card-5, .app-card-4 {
   text-align: center;
   padding: 2.5rem !important;
   min-height: 394px;
@@ -20113,19 +20113,19 @@ body {
   overflow: hidden;
   border: none;
 }
-.app-card-3:before, .app-card-9:before, .app-card-8:before, .app-card-7:before, .app-card-5:before, .app-card-4:before {
+.app-card-3:before, .app-card-11:before, .app-card-9:before, .app-card-8:before, .app-card-10:before, .app-card-7:before, .app-card-5:before, .app-card-4:before {
   content: "";
   position: absolute;
   inset: 0;
   background: #444444;
   background: linear-gradient(180deg, rgba(68, 68, 68, 0) 35%, rgb(0, 0, 0) 100%);
 }
-.app-card-3 .card-title, .app-card-9 .card-title, .app-card-8 .card-title, .app-card-7 .card-title, .app-card-5 .card-title, .app-card-4 .card-title {
+.app-card-3 .card-title, .app-card-11 .card-title, .app-card-9 .card-title, .app-card-8 .card-title, .app-card-10 .card-title, .app-card-7 .card-title, .app-card-5 .card-title, .app-card-4 .card-title {
   position: relative;
   font-size: 1.25rem;
   line-height: 1.625rem;
 }
-.app-card-3 .card-text, .app-card-9 .card-text, .app-card-8 .card-text, .app-card-7 .card-text, .app-card-5 .card-text, .app-card-4 .card-text {
+.app-card-3 .card-text, .app-card-11 .card-text, .app-card-9 .card-text, .app-card-8 .card-text, .app-card-10 .card-text, .app-card-7 .card-text, .app-card-5 .card-text, .app-card-4 .card-text {
   position: relative;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -20236,29 +20236,29 @@ body {
   }
 }
 
-.app-card-8 {
+.app-card-8, .app-card-10 {
   min-height: 500px;
   border-radius: 1.875rem !important;
   border: none;
   padding: 0 !important;
 }
-.app-card-8:before {
+.app-card-8:before, .app-card-10:before {
   display: none;
 }
-.app-card-8 .card-text-wrapper {
+.app-card-8 .card-text-wrapper, .app-card-10 .card-text-wrapper {
   background-color: rgb(11, 32, 49);
   color: #fff;
   padding: 1.875rem;
   text-align: left;
   border-radius: 1rem;
 }
-.app-card-8 .card-title {
+.app-card-8 .card-title, .app-card-10 .card-title {
   font-size: 1.375rem;
   line-height: 2rem;
   margin-bottom: 11px;
 }
 @media (max-width: 575px) {
-  .app-card-8 {
+  .app-card-8, .app-card-10 {
     min-height: 450px;
   }
 }
@@ -20281,6 +20281,30 @@ body {
   .app-card-9 {
     min-height: 230px;
   }
+}
+
+.app-card-10 {
+  padding: 0.875rem 1.0625rem !important;
+}
+@media (max-width: 768px) {
+  .app-card-10 {
+    min-height: 350px;
+  }
+}
+
+.app-card-11 {
+  border: none !important;
+  min-height: 265px;
+  border-radius: 1.25rem;
+  text-align: center;
+}
+.app-card-11:before {
+  display: none;
+}
+.app-card-11 .card-title {
+  font-size: 1.75rem;
+  line-height: 2.0625rem;
+  margin-bottom: 0px;
 }
 
 .app-job-card {
@@ -20545,14 +20569,14 @@ body {
 .app-header .nav-item:hover .mega-menu {
   opacity: 1;
   visibility: visible;
-  top: calc(100% - 1px);
+  top: 100%;
 }
 
 .mega-menu {
   position: fixed;
   left: 0;
   width: 100%;
-  top: calc(100% - 20px);
+  top: calc(100% + 20px);
   padding-block: 3.125rem;
   background-color: #0B2031;
   color: #fff;
@@ -21136,5 +21160,77 @@ body {
 @media (max-width: 768px) {
   .contact-box:not(:last-child) {
     border-right: none;
+  }
+}
+
+.industry-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 2.125rem;
+       column-gap: 2.125rem;
+  row-gap: 6.25rem;
+  padding-bottom: calc(6.125rem * 2);
+}
+@media (min-width: 769px) {
+  .industry-card-grid .card:nth-child(3n) {
+    translate: 0 calc(6.125rem * 2);
+  }
+  .industry-card-grid .card:nth-child(3n+2) {
+    translate: 0 6.125rem;
+  }
+}
+@media (max-width: 768px) and (min-width: 576px) {
+  .industry-card-grid {
+    row-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 6.125rem;
+  }
+  .industry-card-grid .card:nth-child(2n+1) {
+    translate: 0 6.125rem;
+  }
+}
+@media (max-width: 575px) {
+  .industry-card-grid {
+    row-gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 0;
+  }
+}
+
+.service-card-grid {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  gap: 1.5rem;
+}
+.service-card-grid .card-col-12 {
+  grid-column: span 12;
+}
+.service-card-grid .card-col-11 {
+  grid-column: span 11;
+}
+.service-card-grid .card-col-10 {
+  grid-column: span 10;
+}
+.service-card-grid .card-col-9 {
+  grid-column: span 9;
+}
+.service-card-grid .card-col-8 {
+  grid-column: span 8;
+}
+.service-card-grid .card-col-7 {
+  grid-column: span 7;
+}
+.service-card-grid .card-col-6 {
+  grid-column: span 6;
+}
+@media (max-width: 768px) {
+  .service-card-grid .card-col-6,
+  .service-card-grid .card-col-7,
+  .service-card-grid .card-col-8,
+  .service-card-grid .card-col-9,
+  .service-card-grid .card-col-10,
+  .service-card-grid .card-col-11,
+  .service-card-grid .card-col-12 {
+    grid-column: span 20;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -123,7 +123,7 @@
             .mega-menu {
                 opacity: 1;
                 visibility: visible;
-                top: calc(100% - 1px);
+                top: calc(100%);
             }
         }
     }
@@ -134,7 +134,7 @@
     position: fixed;
     left: 0;
     width: 100%;
-    top: calc(100% - 20px);
+    top: calc(100% + 20px);
     padding-block: toRem(50);
     background-color: #0B2031;
     color: #fff;
@@ -809,6 +809,7 @@
 }
 
 //END : section go beyond
+//BEGIN : contact us form
 .section-contactus-form {
     @media(max-width: 1199px) {
         .design-ele {
@@ -862,3 +863,96 @@
         }
     }
 }
+
+//END : contact us form
+
+//BEGIN : industry card
+.industry-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: toRem(34);
+    row-gap: toRem(100);
+    $card-offset: toRem(98);
+    padding-bottom: calc($card-offset * 2);
+
+    @media(min-width: 769px) {
+        .card {
+            &:nth-child(3n) {
+                translate: 0 calc($card-offset * 2);
+            }
+
+            &:nth-child(3n + 2) {
+
+                translate: 0 $card-offset;
+            }
+        }
+    }
+
+    @media(max-width: 768px) and (min-width: 576px) {
+        row-gap: toRem(16);
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: $card-offset;
+
+        .card {
+            &:nth-child(2n + 1) {
+                translate: 0 $card-offset;
+            }
+        }
+    }
+
+    @media(max-width: 575px) {
+        row-gap: toRem(16);
+        grid-template-columns: repeat(1, 1fr);
+        padding-bottom: 0;
+    }
+}
+
+//END : industry card
+//BEGIN : services card grid
+.service-card-grid {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    gap: toRem(24);
+
+    .card-col-12 {
+        grid-column: span 12;
+    }
+
+    .card-col-11 {
+        grid-column: span 11;
+    }
+
+    .card-col-10 {
+        grid-column: span 10;
+    }
+
+    .card-col-9 {
+        grid-column: span 9;
+    }
+
+    .card-col-8 {
+        grid-column: span 8;
+    }
+
+    .card-col-7 {
+        grid-column: span 7;
+    }
+
+    .card-col-6 {
+        grid-column: span 6;
+    }
+    @media(max-width: 768px){
+        .card-col-6,
+        .card-col-7,
+        .card-col-8,
+        .card-col-9,
+        .card-col-10,
+        .card-col-11,
+        .card-col-12{
+          grid-column: span 20;  
+        }
+    }
+
+}
+
+//END : services card grid
