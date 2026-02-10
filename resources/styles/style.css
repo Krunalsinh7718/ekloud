@@ -21033,4 +21033,55 @@ body {
 .section-job-opportunities .row {
   --bs-gutter-x: 1.5625rem;
   --bs-gutter-y: 3.125rem;
+}
+
+@media (max-width: 1199px) {
+  .section-contactus-form .design-ele {
+    display: none;
+  }
+}
+
+.contactus-form-ele-wrapper {
+  gap: 5.9375rem;
+}
+
+.form-card-dark {
+  border: 1px solid #1E5B8B;
+  background-color: #0B2031;
+}
+.form-card-dark .form-control {
+  background-color: #0E2E47;
+  border-color: #1E5B8B;
+  color: #fff;
+}
+.form-card-dark .form-control::-moz-placeholder {
+  color: #B6B6B6;
+  opacity: 1;
+}
+.form-card-dark .form-control::placeholder {
+  color: #B6B6B6;
+  opacity: 1;
+}
+.form-card-dark .form-control::-webkit-input-placeholder {
+  color: #B6B6B6;
+}
+.form-card-dark .form-control:-ms-input-placeholder {
+  color: #B6B6B6;
+}
+
+.contact-box {
+  text-align: center;
+  color: #fff;
+  padding-inline: 1.75rem;
+}
+.contact-box img {
+  height: 38px;
+  margin-bottom: 5px;
+}
+.contact-box .box-title {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.contact-box .box-text {
+  font-size: 14px;
 }/*# sourceMappingURL=style.css.map */
