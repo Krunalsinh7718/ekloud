@@ -45,6 +45,10 @@ body {
     color: rgb(128, 128, 128);
 }
 
+.app-row-gap {
+    --bs-gutter-y: 1.5rem;
+}
+
 
 .section-pad {
     padding-block: toRem(80);
@@ -758,6 +762,7 @@ body {
     min-height: 394px;
     border-radius: toRem(30) !important;
     overflow: hidden;
+    border: none;
 
     &:before {
         content: "";
@@ -925,6 +930,27 @@ body {
 
     @media(max-width: 575px) {
         min-height: 450px;
+    }
+}
+
+.app-card-9 {
+    @extend .app-card-3;
+    border-radius: toRem(8) !important;
+    padding: toRem(30) !important;
+    color: #fff;
+    text-align: left;
+
+    &:before {
+        display: none;
+    }
+
+    @media(max-width: 1199px) {
+        .title-font {
+            font-size: 30px;
+        }
+    }
+    @media(max-width: 768px) {
+        min-height: 230px;
     }
 }
 

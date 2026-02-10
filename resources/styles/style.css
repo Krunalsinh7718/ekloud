@@ -4,13 +4,13 @@
 }
 
 /*bootstrap variable overwrite*/
-.section-testimonials .testimonials-bg:after, .contact-us-card, .app-card-3, .app-card-8, .app-card-7, .app-card-5, .app-card-4, .app-card-2, .app-card-1 {
+.section-testimonials .testimonials-bg:after, .contact-us-card, .app-card-3, .app-card-9, .app-card-8, .app-card-7, .app-card-5, .app-card-4, .app-card-2, .app-card-1 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.app-card-3, .app-card-8, .app-card-7, .app-card-5, .app-card-4, .app-card-2, .app-card-1 {
+.app-card-3, .app-card-9, .app-card-8, .app-card-7, .app-card-5, .app-card-4, .app-card-2, .app-card-1 {
   border: 1px solid #FFFFFF;
   background-color: #111 !important;
   border-radius: 0.625rem;
@@ -19,7 +19,7 @@
   flex-direction: column;
   justify-content: flex-end;
 }
-.app-card-3 .card-title, .app-card-8 .card-title, .app-card-7 .card-title, .app-card-5 .card-title, .app-card-4 .card-title, .app-card-2 .card-title, .app-card-1 .card-title {
+.app-card-3 .card-title, .app-card-9 .card-title, .app-card-8 .card-title, .app-card-7 .card-title, .app-card-5 .card-title, .app-card-4 .card-title, .app-card-2 .card-title, .app-card-1 .card-title {
   font-family: "Poppins";
   font-size: 2.25rem;
   line-height: 2.625rem;
@@ -27,14 +27,14 @@
   letter-spacing: 0.2px;
   color: #FFFFFF;
 }
-.app-card-3 .card-text, .app-card-8 .card-text, .app-card-7 .card-text, .app-card-5 .card-text, .app-card-4 .card-text, .app-card-2 .card-text, .app-card-1 .card-text {
+.app-card-3 .card-text, .app-card-9 .card-text, .app-card-8 .card-text, .app-card-7 .card-text, .app-card-5 .card-text, .app-card-4 .card-text, .app-card-2 .card-text, .app-card-1 .card-text {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 2rem;
   color: #FFFFFF;
 }
 @media (max-width: 768px) {
-  .app-card-3, .app-card-8, .app-card-7, .app-card-5, .app-card-4, .app-card-2, .app-card-1 {
+  .app-card-3, .app-card-9, .app-card-8, .app-card-7, .app-card-5, .app-card-4, .app-card-2, .app-card-1 {
     padding: 1rem;
   }
 }
@@ -19468,6 +19468,10 @@ body {
   color: rgb(128, 128, 128);
 }
 
+.app-row-gap {
+  --bs-gutter-y: 1.5rem;
+}
+
 .section-pad {
   padding-block: 5rem;
 }
@@ -20088,26 +20092,27 @@ body {
   }
 }
 
-.app-card-3, .app-card-8, .app-card-7, .app-card-5, .app-card-4 {
+.app-card-3, .app-card-9, .app-card-8, .app-card-7, .app-card-5, .app-card-4 {
   text-align: center;
   padding: 2.5rem !important;
   min-height: 394px;
   border-radius: 1.875rem !important;
   overflow: hidden;
+  border: none;
 }
-.app-card-3:before, .app-card-8:before, .app-card-7:before, .app-card-5:before, .app-card-4:before {
+.app-card-3:before, .app-card-9:before, .app-card-8:before, .app-card-7:before, .app-card-5:before, .app-card-4:before {
   content: "";
   position: absolute;
   inset: 0;
   background: #444444;
   background: linear-gradient(180deg, rgba(68, 68, 68, 0) 35%, rgb(0, 0, 0) 100%);
 }
-.app-card-3 .card-title, .app-card-8 .card-title, .app-card-7 .card-title, .app-card-5 .card-title, .app-card-4 .card-title {
+.app-card-3 .card-title, .app-card-9 .card-title, .app-card-8 .card-title, .app-card-7 .card-title, .app-card-5 .card-title, .app-card-4 .card-title {
   position: relative;
   font-size: 1.25rem;
   line-height: 1.625rem;
 }
-.app-card-3 .card-text, .app-card-8 .card-text, .app-card-7 .card-text, .app-card-5 .card-text, .app-card-4 .card-text {
+.app-card-3 .card-text, .app-card-9 .card-text, .app-card-8 .card-text, .app-card-7 .card-text, .app-card-5 .card-text, .app-card-4 .card-text {
   position: relative;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -20242,6 +20247,26 @@ body {
 @media (max-width: 575px) {
   .app-card-8 {
     min-height: 450px;
+  }
+}
+
+.app-card-9 {
+  border-radius: 0.5rem !important;
+  padding: 1.875rem !important;
+  color: #fff;
+  text-align: left;
+}
+.app-card-9:before {
+  display: none;
+}
+@media (max-width: 1199px) {
+  .app-card-9 .title-font {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .app-card-9 {
+    min-height: 230px;
   }
 }
 
@@ -21074,6 +21099,9 @@ body {
   color: #fff;
   padding-inline: 1.75rem;
 }
+.contact-box:not(:last-child) {
+  border-right: 1px solid #666;
+}
 .contact-box img {
   height: 38px;
   margin-bottom: 5px;
@@ -21084,4 +21112,9 @@ body {
 }
 .contact-box .box-text {
   font-size: 14px;
+}
+@media (max-width: 768px) {
+  .contact-box:not(:last-child) {
+    border-right: none;
+  }
 }/*# sourceMappingURL=style.css.map */
