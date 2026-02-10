@@ -19452,6 +19452,10 @@ body {
   background-color: #131313;
 }
 
+.bg-gradient-blue {
+  background: linear-gradient(90deg, #31B6E7 0%, #2E6DB6 100%), #0B2031;
+}
+
 .color-white {
   color: #fff;
 }
@@ -19572,6 +19576,11 @@ body {
   font-size: 40px;
 }
 
+.app-texts-28 {
+  font-size: 28px;
+  line-height: 38px;
+}
+
 .app-texts-22 {
   font-size: 22px;
   line-height: 32px;
@@ -19580,6 +19589,10 @@ body {
 .app-texts-18 {
   font-size: 18px;
   line-height: 24px;
+}
+
+.app-round-20 {
+  border-radius: 1.25rem;
 }
 
 @media (max-width: 768px) {
@@ -20297,6 +20310,13 @@ body {
   --bs-badge-padding-x: 1.2em;
   font-size: 1rem;
   font-weight: 400;
+}
+
+.app-card-techno {
+  border-radius: 1.25rem;
+}
+.app-card-techno .card-body {
+  padding: 1.875rem;
 }
 
 .app-card-grid-1 {

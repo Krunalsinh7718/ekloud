@@ -29,6 +29,10 @@ body {
     background-color: #131313;
 }
 
+.bg-gradient-blue {
+    background: linear-gradient(90deg, #31B6E7 0%, #2E6DB6 100%), #0B2031;
+}
+
 .color-white {
     color: #fff;
 }
@@ -146,7 +150,10 @@ body {
 .app-texts-40 {
     font-size: 40px;
 }
-
+.app-texts-28 {
+    font-size: 28px;
+    line-height: 38px;
+}
 .app-texts-22 {
     font-size: 22px;
     line-height: 32px;
@@ -155,6 +162,9 @@ body {
 .app-texts-18 {
     font-size: 18px;
     line-height: 24px;
+}
+.app-round-20{
+    border-radius: toRem(20);
 }
 
 @media(max-width: 768px) {
@@ -949,6 +959,7 @@ body {
             font-size: 30px;
         }
     }
+
     @media(max-width: 768px) {
         min-height: 230px;
     }
@@ -985,6 +996,12 @@ body {
         --bs-badge-padding-x: 1.2em;
         font-size: toRem(16);
         font-weight: 400;
+    }
+}
+.app-card-techno{
+    border-radius: toRem(20);
+    .card-body{
+        padding: toRem(30);
     }
 }
 

@@ -1,8 +1,4 @@
 //mixin
-
-
-
-
 @mixin keyframes($animName) {
     @-webkit-keyframes #{$animName} {
         @content;
