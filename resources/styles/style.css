@@ -20066,6 +20066,14 @@ img {
   border-radius: 0.625rem;
   border: 1px solid #fff;
   padding: 1.25rem 2.25rem;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+}
+.app-panel.active {
+  background: #31B6E7;
+  background: linear-gradient(90deg, #31B6E7 0%, #2E6DB6 100%);
+  border-color: transparent;
 }
 @media (max-width: 768px) {
   .app-panel {

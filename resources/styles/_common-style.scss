@@ -4,10 +4,12 @@ body {
     font-weight: 300;
     background-color: #000;
 }
-a{
+
+a {
     transition: all 0.1s ease-in-out;
 }
-img{
+
+img {
     height: auto;
     max-width: 100%;
 }
@@ -537,9 +539,11 @@ img{
         flex-direction: column;
         gap: 1.5rem;
         padding-block: 1.5rem;
+
         .sec-img {
             width: 88%;
         }
+
         .sec-text {
             padding: 1rem;
             text-align: center;
@@ -715,12 +719,22 @@ img{
     border-radius: toRem(10);
     border: 1px solid #fff;
     padding: toRem(20) toRem(36);
+    width: 100%;
+    text-align: left;
+    background: transparent;
+
+    &.active {
+        background: #31B6E7;
+        background: linear-gradient(90deg, #31B6E7 0%, #2E6DB6 100%);
+        border-color: transparent;
+    }
 
     @media(max-width: 768px) {
         font-size: 16px;
         line-height: 16px;
         padding: 1rem 1rem;
     }
+
 }
 
 .app-card-1 {
@@ -964,7 +978,8 @@ img{
     padding: toRem(30) !important;
     color: #fff;
     text-align: left;
-    &:hover{
+
+    &:hover {
         color: #fff;
     }
 
@@ -986,20 +1001,24 @@ img{
 .app-card-10 {
     @extend .app-card-8;
     padding: toRem(14) toRem(17) !important;
-    @media(max-width: 768px){
+
+    @media(max-width: 768px) {
         min-height: 350px;
     }
 }
+
 .app-card-11 {
     @extend .app-card-3;
     border: none !important;
     min-height: 265px;
     border-radius: toRem(20);
     text-align: center;
-    &:before{
+
+    &:before {
         display: none;
     }
-    .card-title{
+
+    .card-title {
         font-size: toRem(28);
         line-height: toRem(33);
         margin-bottom: 0px;
