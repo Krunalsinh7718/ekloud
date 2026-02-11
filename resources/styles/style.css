@@ -46,6 +46,7 @@
   background-color: #4FA4DA;
   border: none;
   box-shadow: none;
+  transition: all 0.3s ease-in-out;
 }
 .progress-slider .splide__arrow svg, .single-slider .splide__arrow svg {
   width: 30px;
@@ -19428,6 +19429,10 @@ body {
   background-color: #000;
 }
 
+a {
+  transition: all 0.1s ease-in-out;
+}
+
 .bg-dark-blue {
   background-color: #0C263C;
 }
@@ -20511,12 +20516,15 @@ body {
   padding-block: 0.25rem;
   border-radius: 5rem;
   border: 1px solid transparent;
+  position: relative;
+  transition: all 0.3s ease-in-out;
 }
 .app-header .navbar-nav .nav-link:hover, .app-header .navbar-nav .nav-link:focus, .app-header .navbar-nav .nav-link.active {
   background: rgba(79, 164, 218, 0.8);
   border-color: #4FA4DA;
 }
 .app-header .navbar-nav .btn {
+  position: relative;
   border-radius: 10px;
 }
 @media (max-width: 1199px) {
@@ -20588,6 +20596,7 @@ body {
 }
 .mega-menu .service-list-item {
   display: flex;
+  text-decoration: none;
   gap: 0.9375rem;
   padding: 0.75rem;
   border-radius: 0.9375rem;
@@ -20605,6 +20614,7 @@ body {
   background-color: rgb(17, 52, 81);
 }
 .mega-menu .service-list-item .service-title {
+  color: #fff;
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
@@ -20787,9 +20797,15 @@ body {
 .main-footer .social-media a {
   font-size: 20px;
 }
+.main-footer .social-media a:hover, .main-footer .social-media a:focus {
+  scale: 1.3;
+}
 .main-footer a {
   text-decoration: none;
   color: #fff;
+}
+.main-footer a:hover, .main-footer a:focus {
+  color: #4FA4DA;
 }
 @media (max-width: 1366px) {
   .main-footer .footer-section-1 {

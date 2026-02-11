@@ -48,6 +48,8 @@
             padding-block: 0.25rem;
             border-radius: toRem(80);
             border: 1px solid transparent;
+            position: relative;
+            transition: all 0.3s ease-in-out;
 
             &:hover,
             &:focus,
@@ -58,6 +60,7 @@
         }
 
         .btn {
+            position: relative;
             border-radius: 10px;
         }
     }
@@ -146,6 +149,7 @@
 
     .service-list-item {
         display: flex;
+        text-decoration: none;
         gap: toRem(15);
         padding: toRem(12);
         border-radius: toRem(15);
@@ -166,6 +170,7 @@
         }
 
         .service-title {
+            color: #fff;
             font-size: toRem(16);
             font-weight: 600;
             margin-bottom: 0.25rem;
@@ -407,12 +412,23 @@
     .social-media {
         a {
             font-size: 20px;
+            
+            &:hover,
+            &:focus {
+                scale: 1.3;
+            }
         }
     }
-
+    
     a {
         text-decoration: none;
         color: #fff;
+        
+
+        &:hover,
+        &:focus {
+            color: $app-primary;
+        }
     }
 
     @media(max-width: 1366px) {
@@ -941,15 +957,17 @@
     .card-col-6 {
         grid-column: span 6;
     }
-    @media(max-width: 768px){
+
+    @media(max-width: 768px) {
+
         .card-col-6,
         .card-col-7,
         .card-col-8,
         .card-col-9,
         .card-col-10,
         .card-col-11,
-        .card-col-12{
-          grid-column: span 20;  
+        .card-col-12 {
+            grid-column: span 20;
         }
     }
 

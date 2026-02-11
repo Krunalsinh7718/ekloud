@@ -124,6 +124,7 @@
         background-color: $app-primary;
         border: none;
         box-shadow: none;
+        transition: all 0.3s ease-in-out;
 
         svg {
             width: 30px;

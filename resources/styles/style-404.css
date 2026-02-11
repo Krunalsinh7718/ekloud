@@ -52,9 +52,10 @@ body {
     margin-bottom: 34px;
 }
 
-button {
+a,button {
     font-size: 16px;
     color: #fff;
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -67,7 +68,8 @@ button {
     border-radius: 10px;
 }
 
-button svg {
+button svg ,
+a svg {
     height: 20px;
     width: 20px;
 }
