@@ -7,6 +7,10 @@ body {
 a{
     transition: all 0.1s ease-in-out;
 }
+img{
+    height: auto;
+    max-width: 100%;
+}
 
 .bg-dark-blue {
     background-color: $app-dark-blue;
@@ -120,7 +124,7 @@ a{
 }
 
 .title-font {
-    font-family: "Poppins", sans-serif;
+    font-family: $app-title-font;
 }
 
 .app-texts-60 {
@@ -521,18 +525,23 @@ a{
         width: 50%;
         object-fit: contain;
         border-radius: 20px;
+        flex: 1;
     }
 
     .sec-text {
         padding: 2rem;
+        flex: 1;
     }
 
     @media(max-width: 768px) {
         flex-direction: column;
         gap: 1.5rem;
         padding-block: 1.5rem;
-
+        .sec-img {
+            width: 88%;
+        }
         .sec-text {
+            padding: 1rem;
             text-align: center;
             order: 1;
         }
@@ -698,7 +707,7 @@ a{
 }
 
 .app-panel {
-    font-family: 'Poppins';
+    font-family: $app-title-font;
     font-weight: 500;
     font-size: 25px;
     line-height: 36px;
@@ -955,6 +964,9 @@ a{
     padding: toRem(30) !important;
     color: #fff;
     text-align: left;
+    &:hover{
+        color: #fff;
+    }
 
     &:before {
         display: none;

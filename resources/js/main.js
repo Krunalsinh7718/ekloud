@@ -101,29 +101,28 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     // END: sliders ----------------------------
-    // BEGIN: nav link click ----------------------------
-
-    const navLinks = document.querySelectorAll(".nav-link");
-
-    navLinks.forEach(link => {
-        link.addEventListener("click", function (e) {
-            if (window.innerWidth < 992) {
-                e.stopPropagation();
-
-                // remove active from all
-                navLinks.forEach(l => l.classList.remove("active"));
-
-                // add active to clicked one
-                this.classList.add("active");
+    // BEGIN: responsive nav button ----------------------------
+    const responsiveNavBtn = document.querySelectorAll(".responsive-submenu-btn");
+    responsiveNavBtn.forEach(btnEle => {
+        btnEle.addEventListener('click', e => {
+    
+            const megaMenu = e.currentTarget.nextElementSibling;
+            const icon = btnEle.querySelector('i');
+            
+            if(megaMenu){
+                if(megaMenu.classList.contains('active')){
+                    megaMenu.classList.remove('active');
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                }else{
+                    megaMenu.classList.add('active');
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                }
             }
-        });
-    });
-
-    document.addEventListener("click", function () {
-        navLinks.forEach(link => link.classList.remove("active"));
-    });
-
-    // END: nav link click ----------------------------
+        })
+    })
+    // END: responsive nav button ----------------------------
 
 
 });
