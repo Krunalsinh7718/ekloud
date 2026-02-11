@@ -34,8 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     const singleSlideDots = document.querySelectorAll(".single-slider-dots");
-    console.log(singleSlideDots);
-    
 
     singleSlideDots.forEach(e => {
         const splide = new Splide(e, {
@@ -89,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
         splide.mount();
 
         if (slidePrevBtn) {
-            console.log("1");
             slidePrevBtn.addEventListener('click', e => {
 
                 splide.go('-1')
