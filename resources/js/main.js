@@ -105,16 +105,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const responsiveNavBtn = document.querySelectorAll(".responsive-submenu-btn");
     responsiveNavBtn.forEach(btnEle => {
         btnEle.addEventListener('click', e => {
-    
+
             const megaMenu = e.currentTarget.nextElementSibling;
             const icon = btnEle.querySelector('i');
-            
-            if(megaMenu){
-                if(megaMenu.classList.contains('active')){
+
+            if (megaMenu) {
+                if (megaMenu.classList.contains('active')) {
                     megaMenu.classList.remove('active');
                     icon.classList.remove('fa-minus');
                     icon.classList.add('fa-plus');
-                }else{
+                } else {
                     megaMenu.classList.add('active');
                     icon.classList.remove('fa-plus');
                     icon.classList.add('fa-minus');
@@ -123,6 +123,44 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     })
     // END: responsive nav button ----------------------------
+    // BEGIN: number animation counter ----------------------------
+    const counters = document.querySelectorAll('.numberAnimCounter');
+    const speed = 200;
+
+    function startCounter(counter) {
+        const animate = () => {
+            const value = +counter.getAttribute('numCount');
+            const data = +counter.innerText;
+
+            const time = value / speed;
+
+            if (data < value) {
+                counter.innerText = Math.ceil(data + time);
+                setTimeout(animate, 20);
+            } else {
+                counter.innerText = value;
+            }
+        };
+
+        animate();
+    }
+
+    // Intersection Observer
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startCounter(entry.target);
+                observer.unobserve(entry.target); // run only once
+            }
+        });
+    }, {
+        threshold: 0.5   // start when 50% visible
+    });
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+    // END: number animation counter ----------------------------
 
 
 });
