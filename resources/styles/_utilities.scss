@@ -177,6 +177,11 @@ $utilities: map-merge(
       class: mw,
       values: (100: 100%)
     ),
+    "max-width-fit-content": (
+      property: min-width,
+      class: mw-fit,
+      values: ("content": fit-content)
+    ),
     "viewport-width": (
       property: width,
       class: vw,
