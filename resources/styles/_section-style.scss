@@ -219,7 +219,8 @@
         }
     }
     .mega-menu-links{
-        a{
+        a{  
+            font-size: 16px;
             color: #939393;
             text-decoration: none;
             &:hover{
@@ -231,6 +232,11 @@
 
     @media(max-width: 991px) {
         padding-block: 1rem;
+        .mega-menu-desc{
+        width: 100%;
+        min-width: 100%;
+        margin-bottom: 15px;
+    }
     }
 }
 
