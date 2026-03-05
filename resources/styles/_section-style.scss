@@ -1,6 +1,6 @@
 // BEGIN: main header
 .app-header {
-    background: rgba(22, 20, 33, 0.4);
+    background: rgb(0, 0, 0);
     border: 1px solid rgba(22, 20, 33, 0.5);
     backdrop-filter: blur(12px);
 
@@ -154,7 +154,7 @@
     width: 100%;
     top: 100%;
     padding-block: toRem(50);
-    background-color: #0B2031;
+    background-color: #000;
     color: #fff;
     max-height: calc(100dvh - 95px);
     overflow: auto;
@@ -209,6 +209,24 @@
         background: rgba(255, 255, 255, 0.1);
         border-radius: toRem(20);
         padding: toRem(12);
+    }
+    .mega-menu-desc{
+        width: 435px;
+        min-width: 435px;
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    .mega-menu-links{
+        a{
+            color: #939393;
+            text-decoration: none;
+            &:hover{
+                color: #4FA4DA;
+                text-decoration: underline;
+            }
+        }
     }
 
     @media(max-width: 991px) {
