@@ -162,12 +162,7 @@
     visibility: hidden;
     transition: all 0.3s ease-in-out;
 
-    &.active {
-        display: block;
-        opacity: 1;
-        visibility: visible;
-        top: calc(100%);
-    }
+
 
     .service-list-item {
         display: flex;
@@ -210,20 +205,24 @@
         border-radius: toRem(20);
         padding: toRem(12);
     }
-    .mega-menu-desc{
+
+    .mega-menu-desc {
         width: 435px;
         min-width: 435px;
-        a{
+
+        a {
             color: #fff;
             text-decoration: none;
         }
     }
-    .mega-menu-links{
-        a{  
+
+    .mega-menu-links {
+        a {
             font-size: 16px;
             color: #939393;
             text-decoration: none;
-            &:hover{
+
+            &:hover {
                 color: #4FA4DA;
                 text-decoration: underline;
             }
@@ -232,11 +231,19 @@
 
     @media(max-width: 991px) {
         padding-block: 1rem;
-        .mega-menu-desc{
-        width: 100%;
-        min-width: 100%;
-        margin-bottom: 15px;
-    }
+
+        .mega-menu-desc {
+            width: 100%;
+            min-width: 100%;
+            margin-bottom: 15px;
+        }
+
+        &.active {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            top: calc(100%);
+        }
     }
 }
 
@@ -572,12 +579,12 @@
     position: relative;
     overflow: hidden;
 
-    
+
     .stands-apart-card-list {
         position: relative;
         max-height: 829px;
         overflow: auto;
-        
+
         .stands-apart-list-title {
             position: absolute;
             width: 100%;
@@ -589,6 +596,7 @@
             display: block;
             margin-bottom: 170px;
             z-index: 1;
+
             &:before {
                 content: "";
                 position: absolute;
@@ -598,7 +606,7 @@
                 top: -32px;
                 background: rgba(79, 164, 218, 0.6);
                 filter: blur(150px);
-        
+
             }
         }
 

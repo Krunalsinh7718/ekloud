@@ -100,6 +100,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     })
 
+    const responsiveAutoScrollSlider = document.querySelectorAll(".responsive-auto-scroll-slider");
+    responsiveAutoScrollSlider.forEach(e => {
+       
+
+        const splide = new Splide(e, {
+             type   : 'loop',
+            pagination: false,
+            arrows: false,
+            autoWidth: true,
+            gap: 18,
+            autoplay: false,
+            drag: false,
+            breakpoints: {
+                1400: {
+                    autoplay: true,
+                    interval: 1500
+                },
+            }
+
+        });
+
+       
+
+        splide.mount();
+    })
+
+
     // END: sliders ----------------------------
     // BEGIN: responsive nav button ----------------------------
     const responsiveNavBtn = document.querySelectorAll(".responsive-submenu-btn");
