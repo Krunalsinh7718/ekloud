@@ -383,6 +383,7 @@ img {
 
         .nav-item {
             flex: 1;
+            overflow: hidden;
         }
 
         .nav-item {
@@ -391,15 +392,16 @@ img {
         }
 
         .nav-link {
+            min-height: 100px;
             font-family: "Poppins", sans-serif;
             font-weight: 500;
             height: 100px;
             text-align: center;
-            font-size: toRem(16);
+            font-size: toRem(14);
             position: relative;
             margin-left: -1px;
             border-color: transparent rgba(128, 127, 127, 0.616) rgba(128, 127, 127, 0.616) rgba(128, 127, 127, 0.616);
-
+            padding-block: 8px;
             &:after {
                 content: "";
                 position: absolute;
