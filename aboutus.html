@@ -424,22 +424,22 @@
               </h2>
               <div class="app-container">
                 <div class="row text-center ">
-                  <div class="col-lg-3">
+                  <div class="col-sm-6 col-lg-3">
                     <h3 class="title-font app-texts-60 fw-bold text-primary mb-2"><span class="numberAnimCounter"
                         numCount="120">0</span>+</h3>
                     <p class="app-texts-22">Projects Delivered</p>
                   </div>
-                  <div class="col-lg-3">
+                  <div class="col-sm-6 col-lg-3">
                     <h3 class="title-font app-texts-60 fw-bold text-primary mb-2"><span class="numberAnimCounter"
                         numCount="100">0</span>+</h3>
                     <p class="app-texts-22">Clients Served</p>
                   </div>
-                  <div class="col-lg-3">
+                  <div class="col-sm-6 col-lg-3">
                     <h3 class="title-font app-texts-60 fw-bold text-primary mb-2"><span class="numberAnimCounter"
                         numCount="250">0</span>+</h3>
                     <p class="app-texts-22">Consultants Placed</p>
                   </div>
-                  <div class="col-lg-3">
+                  <div class="col-sm-6 col-lg-3">
                     <h3 class="title-font app-texts-60 fw-bold text-primary mb-2"><span class="numberAnimCounter"
                         numCount="155">0</span>+</h3>
                     <p class="app-texts-22">Certified Developer</p>
@@ -1033,23 +1033,53 @@
   <script src="./resources/js/bootstrap.bundle.min.js"></script>
   <script src="./resources/js/splide.min.js"></script>
   <script src="./resources/js/splide-extension-auto-scroll.min.js"></script>
+  <script src="./resources/js/gsap.min.js"></script>
+  <script src="./resources/js/ScrollTrigger.min.js"></script>
   <script src="./resources/js/main.js"></script>
   <script>
-    // BEGIN: number animation counter ----------------------------
-    const container = document.getElementById("standsApartListContainer");
-    const title = document.getElementById("standsApartTitle");
+    document.addEventListener("DOMContentLoaded", () => {
 
-    container.addEventListener("scroll", () => {
-      if (container && title) {
+      // BEGIN: number animation counter ----------------------------
+      const container = document.getElementById("standsApartListContainer");
+      const title = document.getElementById("standsApartTitle");
 
-        const scrollTop = container.scrollTop;
+      container.addEventListener("scroll", () => {
+        if (container && title) {
 
-        const newTop = scrollTop * 0.5;
+          const scrollTop = container.scrollTop;
 
-        title.style.top = newTop + "px";
-      }
-    });
-    // END: number animation counter ----------------------------
+          const newTop = scrollTop * 0.5;
+
+          title.style.top = newTop + "px";
+        }
+      });
+      // END: number animation counter ----------------------------
+
+      // BEGIN: banner slide ----------------------------
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      let slides = gsap.utils.toArray(".section-main-banner");
+      console.log(slides);
+
+
+      gsap.to(slides, {
+        yPercent: -100 * (slides.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".content-group",
+          pin: true,
+          scrub: 1,
+          snap: {
+            snapTo: 1 / (slides.length - 1),
+            duration: 0.5,
+            ease: "power1.inOut"
+          },
+          end: () => "+=" + window.innerHeight 
+        }
+      });
+      // END: banner slide ----------------------------
+    })
   </script>
 </body>
 

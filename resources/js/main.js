@@ -102,10 +102,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const responsiveAutoScrollSlider = document.querySelectorAll(".responsive-auto-scroll-slider");
     responsiveAutoScrollSlider.forEach(e => {
-       
 
         const splide = new Splide(e, {
-             type   : 'loop',
+            type: 'loop',
             pagination: false,
             arrows: false,
             autoWidth: true,
@@ -121,10 +120,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
-       
+        splide.mount();
+    })
+
+
+     const appSliderType1 = document.querySelectorAll(".app-slider-type-1");
+    appSliderType1.forEach(e => {
+
+        const splide = new Splide(e, {
+            pagination: false,
+            arrows: true,
+            arrowPath: arrowPath,
+             perPage: 3,
+              perMove: 1,
+            gap: 36,
+            autoplay: true,
+            drag: true,
+            breakpoints: {
+                768: {
+                   perPage: 2,
+                },
+                 575: {
+                   perPage: 1,
+                },
+            }
+
+        });
 
         splide.mount();
     })
+
 
 
     // END: sliders ----------------------------

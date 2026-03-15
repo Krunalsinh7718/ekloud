@@ -5,6 +5,12 @@ body {
     background-color: #000;
 }
 
+// html,
+// body {
+//     scroll-behavior: smooth;
+//      scroll-snap-type: y proximity;
+// }
+
 a {
     transition: all 0.1s ease-in-out;
 }
@@ -716,6 +722,27 @@ img {
         }
     }
 }
+.app-slider-type-1{
+     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+    .splide__arrows{
+        order: 1;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .splide__arrow{
+        translate: none !important;
+        &[disabled]{
+            background-color: #000 !important;
+        }
+    }
+
+    @extend %slider-round-arrow-btn;
+}
 
 .app-panel {
     font-family: $app-title-font;
@@ -746,6 +773,16 @@ img {
 
 .app-card-1 {
     @extend %app-common-card;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 12.24%, rgba(27, 63, 106, 0.706348) 43.74%, #2E6DB6 100%);
+
+    }
 }
 
 .app-card-2 {
@@ -791,6 +828,13 @@ img {
         }
     }
 
+}
+.app-card-2-a {
+    @extend .app-card-2;
+    justify-content: flex-end;
+    @media (max-width: 768px){
+        min-height: 210px !important;
+    }
 }
 
 .card-fixed-width {
@@ -1070,8 +1114,8 @@ img {
     border-radius: toRem(30) !important;
     border: none;
     padding: 0 !important;
-     transition: all 150ms linear;
-     background-position: 50% 50%;
+    transition: all 150ms linear;
+    background-position: 50% 50%;
 
     &:before {
         display: none;
@@ -1079,19 +1123,23 @@ img {
 
     &:hover {
         background-position: 100% 50%;
+
         .card-text-hidden {
             grid-template-rows: 1fr;
             opacity: 1;
         }
+
         .card-text-wrapper {
             min-height: 500px;
             background-color: rgba(11, 32, 49, 0.815);
         }
-        .app-btn-pill{
+
+        .app-btn-pill {
             background-color: transparent;
             color: #fff;
             border-color: #fff;
-            path{
+
+            path {
                 fill: #fff;
             }
         }
@@ -1117,7 +1165,7 @@ img {
         justify-content: flex-end;
         align-items: flex-start;
         min-height: 222px;
-         transition: all 150ms linear;
+        transition: all 150ms linear;
     }
 
     .card-title {
@@ -1129,11 +1177,12 @@ img {
     .card-text {
         overflow: hidden;
     }
-     .app-btn-pill{
-        path{
-           transition: all 150ms linear; 
+
+    .app-btn-pill {
+        path {
+            transition: all 150ms linear;
         }
-     }
+    }
 
     @media(max-width: 575px) {
         min-height: 450px;
@@ -1170,9 +1219,10 @@ img {
     @extend .app-card-8;
     padding: toRem(14) toRem(17) !important;
     background-position: center !important;
-    .card-text-wrapper{
+
+    .card-text-wrapper {
         min-height: auto !important;
-    align-items: center;
+        align-items: center;
     }
 
     @media(max-width: 768px) {
@@ -1238,6 +1288,63 @@ img {
     .card-body {
         padding: toRem(30);
     }
+}
+.accord-card-techno{
+    position: relative;
+    border-radius: 1.25rem !important;
+    border: none;
+    overflow: hidden;
+    
+    // @extend bg-gradient-blue;
+    // @extend color-white;
+    // @extend app-card-techno;
+    transition: all 150ms;
+    &:before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        @extend .bg-gradient-blue;
+        transition: all 150ms;
+    }
+    .accordion-header,
+    .accordion-collapse{
+        position: relative;
+    }
+ 
+    .accordion-button{
+        @extend .title-font;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #fff;
+        background-color: transparent;
+        padding: 1.5rem 1.5rem 0 1.5rem;
+        transition: all 150ms;
+        border-bottom: none !important;
+        box-shadow: none;
+        &:after{
+            opacity: 0;
+        }
+    }
+    .accordion-body{
+        color: #fff;
+        padding-top: 0.4rem;
+        padding-bottom: 1.5rem;
+    }
+    &:has(.accordion-button.collapsed){
+        
+        @extend .bg-dark-blue; 
+
+        &:before{
+            opacity: 0;
+        }
+        
+        .accordion-button{
+            @extend .app-texts-28;
+            font-weight: bold;
+            padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+         }
+    }
+
 }
 
 .app-card-grid-1 {
